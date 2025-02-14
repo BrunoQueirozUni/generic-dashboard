@@ -42,12 +42,12 @@ export default function RecoverPasswordPage() {
               />
             </div>
 
-            <Button className="w-full bg-[#9FE870] text-black hover:bg-[#9FE870]/90">Enviar link de recuperação</Button>
+            <Button className="w-full bg-primary text-black hover:bg-primary/90">Enviar link de recuperação</Button>
           </CardContent>
           <CardFooter className="justify-center pb-6">
             <p className="text-sm text-gray-400">
               Lembrou sua senha?{" "}
-              <Link href="/login" className="text-[#9FE870] hover:underline">
+              <Link href="/login" className="text-primary hover:underline">
                 Voltar para o login
               </Link>
             </p>

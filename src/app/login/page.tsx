@@ -1,8 +1,9 @@
-"use client"
+//"use client"
 
 import Link from "next/link"
 import Image from "next/image"
-import { useState } from "react"
+
+//import { useState } from "react"
 import { Github } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -12,10 +13,20 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
 // Imagens
 import Logo from "../../../public/imgs/alterra.gif"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+   title: "Login",
+   description: "Faça login na sua conta Alterra",
+   openGraph: {
+      title: "Login",
+      images: ["../../../public/imgs/alterra_propaganda.png"]
+   }
+}
 
 export default function LoginPage() {
-   const [is2FARequired, setIs2FARequired] = useState(false)
-   const [verificationCode, setVerificationCode] = useState("")
+   //const [is2FARequired, setIs2FARequired] = useState(false)
+   //const [verificationCode, setVerificationCode] = useState("")
 
    return (
       <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black p-4">
@@ -58,9 +69,10 @@ export default function LoginPage() {
                         className="bg-gray-800 border-gray-700 text-white"
                      />
                   </div>
-
-                  {is2FARequired && (
-                     <div className="space-y-2">
+                  
+                  {
+                  /* is2FARequire
+                     <div className="d && (space-y-2">
                         <Label htmlFor="code" className="text-white">
                            Código 2FA
                         </Label>
@@ -76,12 +88,14 @@ export default function LoginPage() {
                            Digite o código de 6 dígitos do seu aplicativo autenticador
                         </p>
                      </div>
-                  )}
+                  )
+                  */   
+                  }
 
-                  <Button className="w-full bg-[#9FE870] text-black hover:bg-[#9FE870]/90 cursor-pointer">Entrar</Button>
+                  <Button className="w-full bg-primary text-black hover:bg-primary/90 cursor-pointer">Entrar</Button>
 
                   <div className="flex justify-center pb-2">
-                     <Link href="/login/recuperar-senha" className="text-[13px] text-[#9FE870] hover:underline">
+                     <Link href="/login/recuperar-senha" className="text-[13px] text-primary hover:underline">
                         Esqueceu sua senha?
                      </Link>
                   </div>
@@ -116,7 +130,7 @@ export default function LoginPage() {
                      </Button>
                   </div>
                   <div className="text-center mt-2">
-                     <Link href="/configurar-2fa" className="text-xs text-[#9FE870] hover:underline">
+                     <Link href="/configurar-2fa" className="text-xs text-primary hover:underline">
                         Configurar autenticação de dois fatores
                      </Link>
                   </div>
@@ -124,7 +138,7 @@ export default function LoginPage() {
                <CardFooter className="justify-center pb-6">
                   <p className="text-sm text-gray-400">
                      Não tem uma conta?{" "}
-                     <Link href="/register" className="text-[#9FE870] hover:underline">
+                     <Link href="/register" className="text-primary hover:underline">
                         Registre-se
                      </Link>
                   </p>
