@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
@@ -9,12 +10,20 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { TermsDialog } from "@/components/terms-dialog"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
-// Imagens
-import Logo from "../../../public/imgs/alterra.gif"
+// Termos e condições
 import { TermsContent } from "./(components)/TermsContent"
 import { PrivacyContent } from "./(components)/PrivancyContent"
 
+// Imagens
+import Logo from "../../../public/imgs/alterra.gif"
+
 export default function RegisterPage() {
+
+   const form = useForm();
+
+   const handleSubmit = form.handleSubmit((data) => {
+      console.log(data);
+   })
 
    //Termos
    const termsContent = (
@@ -40,22 +49,36 @@ export default function RegisterPage() {
             </div>
 
             <Card className="border-0 bg-gray-900/50 backdrop-blur-xl">
-               <form>
+               <form onSubmit={handleSubmit}>
                   <CardContent className="space-y-4 pt-6">
                      <div className="grid grid-cols-2 gap-4">
+
+                        {/* Nome */}
                         <div className="space-y-2">
                            <Label htmlFor="firstName" className="text-white">
                               Nome
                            </Label>
-                           <Input id="firstName" placeholder="João" className="bg-gray-800 border-gray-700 text-white" />
+                           <Input 
+                              id="firstName" placeholder="João" 
+                              className="bg-gray-800 border-gray-700 text-white" 
+                              {...form.register("firstName")}
+                              />
                         </div>
+
+                        {/* Sobrenome */}
                         <div className="space-y-2">
                            <Label htmlFor="lastName" className="text-white">
                               Sobrenome
                            </Label>
-                           <Input id="lastName" placeholder="Silva" className="bg-gray-800 border-gray-700 text-white" />
+                           <Input 
+                              id="lastName" placeholder="Silva" 
+                              className="bg-gray-800 border-gray-700 text-white" 
+                              {...form.register("lastName")}
+                           />
                         </div>
                      </div>
+
+                     {/* Email */}
                      <div className="space-y-2">
                         <Label htmlFor="email" className="text-white">
                            Email
@@ -65,21 +88,37 @@ export default function RegisterPage() {
                            type="email"
                            placeholder="seu@email.com"
                            className="bg-gray-800 border-gray-700 text-white"
+                           {...form.register("email")}
                         />
                      </div>
+
+                     {/* Senha */}
                      <div className="space-y-2">
                         <Label htmlFor="password" className="text-white">
                            Senha
                         </Label>
-                        <Input id="password" type="password" className="bg-gray-800 border-gray-700 text-white" />
+                        <Input 
+                           id="password" 
+                           type="password" 
+                           className="bg-gray-800 border-gray-700 text-white" 
+                           {...form.register("password")}
+                        />
                      </div>
+
+                     {/* Confirmar senha */}
                      <div className="space-y-2">
                         <Label htmlFor="confirmPassword" className="text-white">
                            Confirmar Senha
                         </Label>
-                        <Input id="confirmPassword" type="password" className="bg-gray-800 border-gray-700 text-white" />
+                        <Input 
+                           id="confirmPassword" 
+                           type="password" 
+                           className="bg-gray-800 border-gray-700 text-white"
+                           {...form.register("confirmPassword")} 
+                        />
                      </div>
 
+                     {/* Checkbox */}
                      <div className="flex items-center space-x-2 mb-4">
                         <Checkbox
                            id="terms"
@@ -107,15 +146,16 @@ export default function RegisterPage() {
 
                      <Button className="w-full bg-primary text-black hover:bg-primary/90 cursor-pointer">Criar conta</Button>
                   </CardContent>
-                  <CardFooter className="justify-center pb-6">
-                     <p className="text-sm text-gray-400">
-                        Já tem uma conta?{" "}
-                        <Link href="/login" className="text-primary hover:underline">
-                           Entrar
-                        </Link>
-                     </p>
-                  </CardFooter>
                </form>
+
+               <CardFooter className="justify-center pb-6">
+                  <p className="text-sm text-gray-400">
+                     Já tem uma conta?{" "}
+                     <Link href="/login" className="text-primary hover:underline">
+                        Entrar
+                     </Link>
+                  </p>
+               </CardFooter>
             </Card>
          </div>
       </div>
