@@ -1,8 +1,8 @@
 
 // Default imports
 import Link from "next/link"
-import Image from "next/image"
 import Form from "next/form"
+import Image from "next/image"
 
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -16,7 +16,8 @@ import { TermsContent } from "./(components)/TermsContent"
 import { PrivacyContent } from "./(components)/PrivancyContent"
 
 // Imagens
-import Logo from "../../../public/imgs/alterra.gif"
+import Logo from "../../../../public/imgs/alterra.gif"
+import registerAction from "@/ts/registerAction"
 
 export default async function RegisterPage() {
 
@@ -45,7 +46,7 @@ export default async function RegisterPage() {
             <Card className="border-0 bg-gray-900/50 backdrop-blur-xl">
                <CardContent>
 
-                  <Form  className="space-y-4 pt-6">
+                  <Form action={registerAction} className="space-y-4 pt-6">
                      <div className="grid grid-cols-2 gap-4">
 
                         {/* Nome */}
@@ -54,7 +55,7 @@ export default async function RegisterPage() {
                               Nome
                            </Label>
                            <Input
-                              name="firsName"
+                              name="firstName"
                               type="text"
                               placeholder="João"
                               className="bg-gray-800 border-gray-700 text-white"
