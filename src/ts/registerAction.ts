@@ -18,6 +18,17 @@ export default async function registerAction(formData: FormData) {
       throw new Error("Todos os campos são obrigatórios");
    }
 
+   //Se o usuário já existe
+   const user = await db.user.findUnique({
+      where: {
+         email: data.email,
+      },
+   })
+
+   if (user) {
+      throw new Error("Este email já está em uso");
+   }
+
    // Cria um novo usuário
    await db.user.create({
       data: {

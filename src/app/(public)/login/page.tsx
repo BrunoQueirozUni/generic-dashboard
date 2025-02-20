@@ -12,7 +12,7 @@ import { Separator } from "@/components/ui/separator"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
 // Imagens
-import Logo from "../../../public/imgs/alterra.gif"
+import Logo from "../../../../public/imgs/alterra.gif"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -92,9 +92,11 @@ export default function LoginPage() {
                   */   
                   }
 
-                  <Button className="w-full bg-primary text-black hover:bg-primary/90 cursor-pointer">Entrar</Button>
+                  <Link href="/dashboard" className="">
+                     <Button className="w-full bg-primary text-black hover:bg-primary/90 cursor-pointer">Entrar</Button>
+                  </Link>
 
-                  <div className="flex justify-center pb-2">
+                  <div className="flex justify-center pb-2 pt-3">
                      <Link href="/login/recuperar-senha" className="text-[13px] text-primary hover:underline">
                         Esqueceu sua senha?
                      </Link>
