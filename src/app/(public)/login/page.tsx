@@ -29,7 +29,7 @@ export default function LoginPage() {
    //const [verificationCode, setVerificationCode] = useState("")
 
    return (
-      <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black p-4">
+      <div className="w-full flex items-center justify-center">
          <div className="w-full max-w-[400px] space-y-6">
             <div className="flex flex-col items-center space-y-2">
                <Image
@@ -37,18 +37,20 @@ export default function LoginPage() {
                   alt="Logo"
                   width={100}
                   height={100}
-                  className="mb-4 select-none" 
+                  className="mb-4 select-none"
                />
                <h1 className="text-2xl font-bold text-white">Bem-vindo!</h1>
                <p className="text-sm text-gray-400">Entre na sua conta para continuar</p>
             </div>
 
-            <Card className="border-0 bg-gray-900/50 backdrop-blur-xl">
+            <Card className="border-0 bg-gray-900/50 backdrop-blur-xl px-5">
                <CardContent className="space-y-4 pt-6">
                   <div className="space-y-2">
-                     <Label htmlFor="email" className="text-white">
-                        Email
-                     </Label>
+                     <div>
+                        <Label htmlFor="password" className="text-white">
+                           E-mail
+                        </Label>
+                     </div>
                      <Input
                         id="email"
                         type="email"
@@ -57,7 +59,7 @@ export default function LoginPage() {
                      />
                   </div>
                   <div className="space-y-2 pb-3">
-                     <div className="flex items-center justify-between">
+                     <div>
                         <Label htmlFor="password" className="text-white">
                            Senha
                         </Label>
@@ -69,34 +71,34 @@ export default function LoginPage() {
                         className="bg-gray-800 border-gray-700 text-white"
                      />
                   </div>
-                  
+
                   {
-                  /* is2FARequire
-                     <div className="d && (space-y-2">
-                        <Label htmlFor="code" className="text-white">
-                           Código 2FA
-                        </Label>
-                        <Input
-                           id="code"
-                           placeholder="000000"
-                           maxLength={6}
-                           value={verificationCode}
-                           onChange={(e) => setVerificationCode(e.target.value)}
-                           className="bg-gray-800 border-gray-700 text-white text-center text-lg tracking-widest"
-                        />
-                        <p className="text-xs text-gray-400 text-center">
-                           Digite o código de 6 dígitos do seu aplicativo autenticador
-                        </p>
-                     </div>
-                  )
-                  */   
+                     /* is2FARequire
+                        <div className="d && (space-y-2">
+                           <Label htmlFor="code" className="text-white">
+                              Código 2FA
+                           </Label>
+                           <Input
+                              id="code"
+                              placeholder="000000"
+                              maxLength={6}
+                              value={verificationCode}
+                              onChange={(e) => setVerificationCode(e.target.value)}
+                              className="bg-gray-800 border-gray-700 text-white text-center text-lg tracking-widest"
+                           />
+                           <p className="text-xs text-gray-400 text-center">
+                              Digite o código de 6 dígitos do seu aplicativo autenticador
+                           </p>
+                        </div>
+                     )
+                     */
                   }
 
                   <Link href="/dashboard" className="">
                      <Button className="w-full bg-primary text-black hover:bg-primary/90 cursor-pointer">Entrar</Button>
                   </Link>
 
-                  <div className="flex justify-center pb-2 pt-3">
+                  <div className="flex justify-center pb-2 pt-6">
                      <Link href="/login/recuperar-senha" className="text-[13px] text-primary hover:underline">
                         Esqueceu sua senha?
                      </Link>
@@ -131,7 +133,7 @@ export default function LoginPage() {
                         GitHub
                      </Button>
                   </div>
-                  <div className="text-center mt-2">
+                  <div className="text-center my-5">
                      <Link href="/configurar-2fa" className="text-xs text-primary hover:underline">
                         Configurar autenticação de dois fatores
                      </Link>

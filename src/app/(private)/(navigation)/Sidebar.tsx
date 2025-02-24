@@ -1,10 +1,19 @@
+"use client"
+
 import Link from "next/link";
+import Image from "next/image";
+
+import { LayoutDashboard, KeySquare } from "lucide-react";
+
+// Imagens
+import Logo from "../../../../public/imgs/pixtopayicon.png"
 
 const menuItems = [
    {
       title: "PRINCIPAL",
       items: [
-         { label: "Dashboard", href: "/dashboard" },
+         { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
+         { icon: KeySquare, label: "Gerenciar APIs", href: "/gerenciar-api" },
       ]
    }
 ]
@@ -13,8 +22,9 @@ export function Sidebar() {
    return (
       <aside className="w-56 bg-gray-900/50 backdrop-blur-xl border-r border-gray-800 pt-6 px-4 hidden lg:flex lg:flex-col">
          <div className="flex justify-center items-center mb-8">
-          <span className="text-xl font-bold text-primary">ALTERRA</span>
-        </div>
+            <Image src={Logo} width={40} height={40} alt="Logo" />
+            <span className="text-xl font-bold text-primary">PixToPay</span>
+         </div>
          <nav className="flex-1">
             {
                menuItems.map((section) => (
@@ -26,8 +36,9 @@ export function Sidebar() {
                            <li key={item.label}>
                               <Link
                                  href={item.href}
-                                 className="text-sm text-gray-300 hover:text-primary hover:bg-gray-800/50 rounded-lg px-3 py-2 block transition-colors"
-                              >
+                                 className="flex gap-2 text-sm text-gray-300 hover:text-primary hover:bg-gray-800/50 rounded-lg px-3 py-2 transition-colors"
+                                 >
+                                 {item.icon && <item.icon className="w-5 h-5" />}
                                  {item.label}
                               </Link>
                            </li>

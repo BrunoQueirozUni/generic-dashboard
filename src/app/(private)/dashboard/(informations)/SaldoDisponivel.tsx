@@ -13,7 +13,7 @@ export function SaldoDisponivel() {
       <>
          {
             items.map((item) => (
-               <Card className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl py-0 px-6">
+               <Card key={item.value} className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl py-0 px-6">
                   <CardHeader className="flex flex-row justify-center space-x-10 px-5 pt-4 pb-1">
                      <CardTitle className="text-sm font-medium">{item.title}</CardTitle>
                      <CurrencyDollar weight="bold" className="h-5 w-5 text-blue-500" />

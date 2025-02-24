@@ -15,19 +15,18 @@ import { PrivacyContent } from "./PrivancyContent"
 
 export default function RegisterForm() {
 
-      //Termos
-      const termsContent = (
-         <TermsContent />
-      )
-      const privacyContent = (
-         <PrivacyContent />
-      )
+   //Termos
+   const termsContent = (
+      <TermsContent />
+   )
+   const privacyContent = (
+      <PrivacyContent />
+   )
 
    return (
       <>
-         <Form action={registerAction} className="space-y-4 pt-6">
+         <Form action={registerAction} className="space-y-4 pt-6 px-5">
             <div className="grid grid-cols-2 gap-4">
-
                {/* Nome */}
                <div className="space-y-2">
                   <Label className="text-white">

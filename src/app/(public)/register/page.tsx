@@ -11,7 +11,7 @@ import Logo from "../../../../public/imgs/alterra.gif"
 
 export default async function RegisterPage() {
    return (
-      <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black p-4">
+      <div className="h-screen w-full flex items-center justify-center">
          <div className="w-full max-w-[420px] space-y-4">
             <div className="flex flex-col items-center space-y-2">
                <Image
@@ -28,7 +28,7 @@ export default async function RegisterPage() {
                <CardContent>
                   <RegisterForm />
                </CardContent>
-               <CardFooter className="justify-center pb-6">
+               <CardFooter className="justify-center pb-6 pt-3">
                   <p className="text-sm text-gray-400">
                      Já tem uma conta?{" "}
                      <Link href="/login" className="text-primary hover:underline">
