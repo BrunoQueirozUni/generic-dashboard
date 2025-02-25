@@ -1,9 +1,9 @@
 "use client";
 
+import "./globals.css";
 import { usePathname } from "next/navigation";
 import { Header } from "./(private)/(navigation)/Header";
 import { Sidebar } from "./(private)/(navigation)/Sidebar";
-import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -13,10 +13,10 @@ export default function RootLayout({
   const pathname = usePathname();
 
   // Rotas onde o Sidebar e Header NÃO devem aparecer
-  const hiddenRoutes = ["/login", "/register",];
+  const hiddenRoutes = ["/login", "/register", "/recuperar-senha"];
 
-  // Verifica se a rota atual está dentro do array
-  const hideNavigation = hiddenRoutes.includes(pathname);
+  // Verifica se a rota atual inicia com alguma das ocultas
+  const hideNavigation = hiddenRoutes.some((route) => pathname.startsWith(route));
 
   return (
     <html lang="pt-br">

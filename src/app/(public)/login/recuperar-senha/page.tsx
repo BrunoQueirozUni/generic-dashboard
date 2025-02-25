@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
 // Imagens  
-import Logo from "../../../../public/imgs/alterra.gif"
+import Logo from "../../../../../public/imgs/alterra.gif"
 
 export default function RecoverPasswordPage() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black p-4">
+    <div className="min-h-screen w-full flex items-center justify-center p-2">
       <div className="w-full max-w-[400px] space-y-6">
         <div className="flex flex-col items-center space-y-2">
           <Image
@@ -24,16 +24,18 @@ export default function RecoverPasswordPage() {
           />
           <h1 className="text-2xl font-bold text-white">Recuperar senha</h1>
           <p className="text-sm text-gray-400 text-center">
-            Digite seu email abaixo e enviaremos um link para redefinir sua senha
+            Digite o seu E-mail abaixo e enviaremos um link para redefinir sua senha
           </p>
         </div>
 
-        <Card className="border-0 bg-gray-900/50 backdrop-blur-xl">
+        <Card className="border-0 bg-gray-900/50 backdrop-blur-xl px-6">
           <CardContent className="space-y-4 pt-6">
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-white">
-                Email
-              </Label>
+              <div>
+                <Label htmlFor="email" className="text-white">
+                  Email
+                </Label>
+              </div>
               <Input
                 id="email"
                 type="email"
@@ -44,7 +46,7 @@ export default function RecoverPasswordPage() {
 
             <Button className="w-full bg-primary text-black hover:bg-primary/90">Enviar link de recuperação</Button>
           </CardContent>
-          <CardFooter className="justify-center pb-6">
+          <CardFooter className="justify-center pb-6 pt-6">
             <p className="text-sm text-gray-400">
               Lembrou sua senha?{" "}
               <Link href="/login" className="text-primary hover:underline">

@@ -8,7 +8,7 @@ import Logo from "../../public/imgs/alterra.gif";
 
 export default function NotFound() {
    return (
-      <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black p-4">
+      <div className="min-h-screen w-full flex items-center justify-center p-4">
          <div className="w-full max-w-[400px] space-y-6">
             <div className="flex flex-col items-center space-y-2">
                <Image

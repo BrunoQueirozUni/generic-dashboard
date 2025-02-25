@@ -2,9 +2,9 @@
 
 import { AccoutStatus } from "./(informations)/AccountStatus";
 import { ApiUsageChart } from "./(informations)/ApiUsageChart";
-import { FaturasPendentes } from "./(informations)/FaturasPendentes";
 import { SaldoDisponivel } from "./(informations)/SaldoDisponivel";
 import { UltimasChamadas } from "./(informations)/UltimasChamadas";
+import { FaturasPendentes } from "./(informations)/FaturasPendentes";
 
 
 
@@ -13,7 +13,7 @@ export default function Dashboard() {
     <>
       <div className="text-white">
         <h1 className="text-3xl font-semibold">Dashboard</h1>
-        <p className="text-xl text-muted-foreground">
+        <p className="text-xl text-muted-foreground text-gray-400">
           Bem-vindo ao painel de controle de APIs
         </p>
       </div>

@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Bell, Search, Settings } from "lucide-react";
 
 export function Header() {
    return (
       <>
-         <header className="h-15 w-full border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl px-10 pl-18 flex items-center justify-between">
+         <header className="py-2 w-full border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl px-10 pl-18 flex items-center justify-between">
             <div className="flex items-center flex-1 max-w-xl">
                <div className="relative flex-1">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />

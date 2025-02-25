@@ -29,7 +29,7 @@ export default function RegisterForm() {
             <div className="grid grid-cols-2 gap-4">
                {/* Nome */}
                <div className="space-y-2">
-                  <Label className="text-white">
+                  <Label className="text-white text-sm">
                      Nome
                   </Label>
                   <Input
@@ -42,7 +42,7 @@ export default function RegisterForm() {
 
                {/* Sobrenome */}
                <div className="space-y-2">
-                  <Label className="text-white">
+                  <Label className="text-white text-sm">
                      Sobrenome
                   </Label>
                   <Input
@@ -69,7 +69,7 @@ export default function RegisterForm() {
 
             {/* Senha */}
             <div className="space-y-2">
-               <Label className="text-white">
+               <Label className="text-white text-sm">
                   Senha
                </Label>
                <Input
@@ -81,7 +81,7 @@ export default function RegisterForm() {
 
             {/* Confirmar senha */}
             <div className="space-y-2">
-               <Label className="text-white">
+               <Label className="text-white text-sm">
                   Confirmar Senha
                </Label>
                <Input
