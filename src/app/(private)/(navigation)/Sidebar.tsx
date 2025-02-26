@@ -3,17 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { LayoutDashboard, KeySquare } from "lucide-react";
+import { LayoutDashboard, KeySquare, CreditCard, HeartOff } from "lucide-react";
 
 // Imagens
 import Logo from "../../../../public/imgs/pixtopayicon.png"
+import Faturamento from "../faturamento/page";
 
 const menuItems = [
    {
       title: "PRINCIPAL",
       items: [
-         { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-         { icon: KeySquare, label: "Gerenciar APIs", href: "/gerenciar-api" },
+         { icon: LayoutDashboard, label: "Dashboard",      href: "/dashboard"     },
+         { icon: KeySquare,       label: "Gerenciar APIs", href: "/gerenciar-api" },
+         { icon: CreditCard,      label: "Faturamento",    href: "/faturamento"   },
       ]
    }
 ]

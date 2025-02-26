@@ -1,14 +1,16 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowsClockwise, Trash } from "@phosphor-icons/react";
+import { Permissions } from "./Permissions";
 
-const items = [
-   { id: 1, title: "alterra_rnqt0ynnf", date: "23/12/2024", },
-   { id: 2, title: "alterra_tb5bgwyqz", date: "05/01/2025", },
-   { id: 3, title: "alterra_7zq1z5z5z", date: "15/02/2025", },
-   { id: 4, title: "alterra_5zq1z5z5z", date: "25/03/2025", },
-   { id: 5, title: "alterra_4zq1z5z5z", date: "05/04/2025", },
-   { id: 6, title: "alterra_3zq1z5z5z", date: "15/05/2025", },
+export const items = [
+   { id: 1, key: "alterra_rnqt0ynnf", date: "23/12/2024", },
+   { id: 2, key: "alterra_tb5bgwyqz", date: "05/01/2025", },
+   { id: 3, key: "alterra_7zq1z5z5z", date: "15/02/2025", },
+   { id: 4, key: "alterra_5zq1z5z5z", date: "25/03/2025", },
+   { id: 5, key: "alterra_4zq1z5z5z", date: "05/04/2025", },
+   { id: 6, key: "alterra_3zq1z5z5z", date: "15/05/2025", },
 ]
 
 export function GerenciarChaves() {
@@ -20,23 +22,28 @@ export function GerenciarChaves() {
                <div className="overflow-y-auto max-h-[150px] px-6">
                   {
                      items.map((item) => (
-                        <>
+                        <div key={item.id}>
                            <div className="flex">
-                              <div key={item.id} className="">
+                              <div className="">
                                  <CardHeader>
-                                    <CardTitle className="text-base font-medium text-gray-200">{item.title}</CardTitle>
+                                    <CardTitle className="text-base font-medium text-gray-200">{item.key}</CardTitle>
                                  </CardHeader>
                                  <CardContent className="">
                                     <span className="text-sm text-gray-400">Criado em: {item.date}</span>
                                  </CardContent>
                               </div>
-                              <div className="flex flex-1 items-center justify-end gap-5">
-                                 <Button className="bg-transparent border border-gray-500 hover:bg-gray-800/70 cursor-pointer">Revogar</Button>
-                                 <Button className="bg-transparent border border-gray-500 hover:bg-gray-800/70 cursor-pointer">Regenerar</Button>
+                              <div className="flex flex-1 items-center justify-end gap-3">
+                                 <Button title="Remover" className="bg-transparent border border-gray-500 hover:bg-gray-800/70 cursor-pointer p-3">
+                                    <Trash className="w-5 h-5" />
+                                 </Button>
+                                 <Button title="Regenerar" className="bg-transparent border border-gray-500 hover:bg-gray-800/70 cursor-pointer p-3">
+                                    <ArrowsClockwise className="w-5 h-5" />
+                                 </Button>
+                                 <Permissions id={item.id} />
                               </div>
                            </div>
                            <hr className="border border-gray-800 my-3 " />
-                        </>
+                        </div>
                      ))
                   }
                </div>

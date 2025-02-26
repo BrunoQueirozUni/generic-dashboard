@@ -3,6 +3,7 @@
 import { MyAPIs } from "./(informations)/MyAPIs";
 import { GerenciarChaves } from "./(informations)/GerenciarChaves";
 import { GerarNovaChaveAPI } from "./(informations)/GerarNovaChaveAPI";
+import { LogsDeAcesso } from "./(informations)/LogsDeAcesso";
 
 export default function GerenciarAPI() {
    return (
@@ -20,6 +21,9 @@ export default function GerenciarAPI() {
             <div className="pt-8 flex gap-8 justify-between">
                <GerarNovaChaveAPI />
                <GerenciarChaves />
+            </div>
+            <div className="pt-8">
+               <LogsDeAcesso />
             </div>
          </div>
       </>
