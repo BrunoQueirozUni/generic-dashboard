@@ -1,8 +1,7 @@
-
-import { Button } from "@/components/ui/button";
+import { DeleteKey } from "./components/DeleteKey";
+import { RenovarKey } from "./components/RenovarKey";
+import { Permissions } from "./components/Permissions";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowsClockwise, Trash } from "@phosphor-icons/react";
-import { Permissions } from "./Permissions";
 
 export const items = [
    { id: 1, key: "alterra_rnqt0ynnf", date: "23/12/2024", },
@@ -33,12 +32,8 @@ export function GerenciarChaves() {
                                  </CardContent>
                               </div>
                               <div className="flex flex-1 items-center justify-end gap-3">
-                                 <Button title="Remover" className="bg-transparent border border-gray-500 hover:bg-gray-800/70 cursor-pointer p-3">
-                                    <Trash className="w-5 h-5" />
-                                 </Button>
-                                 <Button title="Regenerar" className="bg-transparent border border-gray-500 hover:bg-gray-800/70 cursor-pointer p-3">
-                                    <ArrowsClockwise className="w-5 h-5" />
-                                 </Button>
+                                 <DeleteKey id={item.id} />
+                                 <RenovarKey id={item.id} />
                                  <Permissions id={item.id} />
                               </div>
                            </div>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 
-import { items } from "./GerenciarChaves";
+import { items } from "../GerenciarChaves";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -46,10 +46,10 @@ export function Permissions({ id }: PermissionsProp) {
                   </div>
                   <div className="flex gap-4">
                      <Dialog.Close asChild>
-                        <Button className="cursor-pointer bg-green-500 hover:bg-green-600">Salvar</Button>
+                        <Button variant="green">Salvar</Button>
                      </Dialog.Close>
                      <Dialog.Close asChild>
-                        <Button className="cursor-pointer bg-red-500 hover:bg-red-600">Cancelar</Button>
+                        <Button variant="red">Cancelar</Button>
                      </Dialog.Close>
                   </div>
                </Dialog.Content>

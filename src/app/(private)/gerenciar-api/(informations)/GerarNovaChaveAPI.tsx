@@ -24,7 +24,7 @@ export function GerarNovaChaveAPI() {
                <Input id="api-key" value={apiKey} readOnly className="mt-2" />
             </div>
             <div className="pb-5">
-               <Button onClick={generateApiKey} className="text-black bg-white hover:bg-gray-300 cursor-pointer">
+               <Button onClick={generateApiKey} variant="white">
                   Gerar Nova Chave
                </Button>
             </div>
