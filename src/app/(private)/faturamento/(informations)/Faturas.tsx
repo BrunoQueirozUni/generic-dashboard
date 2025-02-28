@@ -14,7 +14,7 @@ const faturas = [
 export function Fatura() {
    return (
       <>
-         <Card className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl mt-8">
+         <Card>
             <h1 className="text-2xl py-4 px-6">Faturas</h1>
             <div className=" px-6">
                <CardContent className="">

@@ -13,7 +13,7 @@ const logs = [
 export function LogsDeAcesso() {
    return (
       <>
-         <Card className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl py-0 px-6 ">
+         <Card>
             <CardTitle className="text-2xl py-4 pb-8 font-normal">Logs de Acesso</CardTitle>
             <CardContent>
                <table className="w-full border-collapse ">

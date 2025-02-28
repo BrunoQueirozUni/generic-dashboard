@@ -13,7 +13,7 @@ const items = [
 export function UltimasChamadas() {
    return (
       <>
-         <Card className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl py-0 px-6 col-span-3">
+         <Card className="px-6 col-span-3">
             <CardHeader className="flex flex-row justify-center space-x-10 px-5 pt-6 pb-7">
                <CardTitle className="text-xl">Últimas chamadas da API</CardTitle>
             </CardHeader>

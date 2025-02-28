@@ -18,7 +18,7 @@ export function MyAPIs() {
    return (
       <>
          <div>
-            <Card className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl py-0">
+            <Card>
                <h1 className="text-2xl py-4 pb-8 px-6">Minhas APIs</h1>
                <div className="overflow-y-auto max-h-[370px]">
                   {

@@ -15,7 +15,7 @@ const data = [
 
 export function ApiUsageChart() {
   return (
-    <Card className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl py-0 px-6 col-span-3">
+    <Card className="px-6 col-span-3">
       <CardHeader className="p-4">
         <CardTitle className="text-xl">Resumo do Uso da API</CardTitle>
       </CardHeader>

@@ -22,7 +22,7 @@ const data = [
 export function TotalGasto() {
    return (
       <>
-         <Card className="flex-1 text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl py-0 px-6 col-span-3">
+         <Card className="flex-1 px-6">
             <CardHeader className="p-4">
                <CardTitle className="text-xl">Total de Gasto</CardTitle>
             </CardHeader>

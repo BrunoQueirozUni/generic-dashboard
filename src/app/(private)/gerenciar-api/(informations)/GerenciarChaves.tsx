@@ -16,7 +16,7 @@ export function GerenciarChaves() {
    return (
       <>
          <div className="flex-1">
-            <Card className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl">
+            <Card>
                <h1 className="text-2xl py-4 pb-8 px-6">Gerenciar Chaves</h1>
                <div className="overflow-y-auto max-h-[150px] px-6">
                   {

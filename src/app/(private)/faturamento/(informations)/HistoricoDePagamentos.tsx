@@ -13,7 +13,7 @@ const items = [
 export function HistoricoDePagamentos() {
    return (
       <>
-         <Card className="flex-1 text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl py-0">
+         <Card className="flex-1">
             <h1 className="text-2xl py-4 px-6">Histórico de Pagamentos</h1>
             <div className="overflow-y-auto max-h-[340px] px-6">
                {

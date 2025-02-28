@@ -15,7 +15,7 @@ export function GerarNovaChaveAPI() {
 
    return (
       <>
-         <Card className="text-white border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl px-5 flex-1">
+         <Card className="px-5 flex-1">
             <h1 className="text-2xl py-5">Gerar nova Chave API</h1>
             <div className="pb-5">
                <Label>

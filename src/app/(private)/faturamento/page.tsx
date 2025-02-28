@@ -1,5 +1,6 @@
 import { Fatura } from "./(informations)/Faturas";
 import { HistoricoDePagamentos } from "./(informations)/HistoricoDePagamentos";
+import { MetodoDePagamento } from "./(informations)/MetedoDePagamento";
 import { TotalGasto } from "./(informations)/TotalGasto";
 
 export default function Faturamento() {
@@ -19,6 +20,9 @@ export default function Faturamento() {
             <div>
                <Fatura />
             </div>
+            <div className="pt-8">
+               <MetodoDePagamento />
+            </div>   
          </div>
       </>
    )

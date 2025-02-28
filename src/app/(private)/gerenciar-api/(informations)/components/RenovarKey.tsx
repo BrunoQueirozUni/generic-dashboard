@@ -16,7 +16,7 @@ export function RenovarKey({ id }: PermissionsProp) {
       <>
          <Dialog.Root>
             <Dialog.Trigger asChild>
-               <Button title="Remover" className="bg-transparent border border-gray-500 hover:bg-red-500/40 cursor-pointer p-3">
+               <Button title="Renovar" className="bg-transparent border border-gray-500 hover:bg-red-500/40 cursor-pointer p-3">
                <ArrowsClockwise className="w-5 h-5" />
                </Button>
             </Dialog.Trigger>
