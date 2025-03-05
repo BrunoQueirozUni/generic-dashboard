@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import * as Dialog from "@radix-ui/react-dialog";
 
 interface PermissionsProp {
-   id: Number;
+   id?: Number;
 }
 
 export function DeleteKey({ id }: PermissionsProp) {
@@ -16,7 +16,7 @@ export function DeleteKey({ id }: PermissionsProp) {
       <>
          <Dialog.Root>
             <Dialog.Trigger asChild>
-               <Button title="Remover" className="bg-transparent border border-gray-500 hover:bg-red-500/40 cursor-pointer p-3">
+               <Button title="Remover" className="bg-transparent border border-gray-600 hover:bg-red-500/40 cursor-pointer p-3">
                   <Trash className="w-5 h-5" />
                </Button>
             </Dialog.Trigger>

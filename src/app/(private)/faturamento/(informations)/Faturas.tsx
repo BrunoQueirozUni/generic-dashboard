@@ -16,8 +16,8 @@ export function Fatura() {
       <>
          <Card>
             <h1 className="text-2xl py-4 px-6">Faturas</h1>
-            <div className=" px-6">
-               <CardContent className="">
+            <div className="px-6">
+               <CardContent>
                   <table className="w-full border-collapse ">
                      <thead className="text-gray-400">
                         <tr className="hover:bg-gray-800/70 transition duration-100">

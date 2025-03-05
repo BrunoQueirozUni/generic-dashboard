@@ -13,10 +13,10 @@ const logs = [
 export function LogsDeAcesso() {
    return (
       <>
-         <Card>
+         <Card className="px-6">
             <CardTitle className="text-2xl py-4 pb-8 font-normal">Logs de Acesso</CardTitle>
             <CardContent>
-               <table className="w-full border-collapse ">
+               <table className="w-full border-collapse">
                   <thead className="text-gray-400">
                      <tr className="hover:bg-gray-800/70 transition duration-100">
                         <th className="text-left px-4 py-3">Chave</th>

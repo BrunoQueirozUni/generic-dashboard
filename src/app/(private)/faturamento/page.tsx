@@ -1,6 +1,7 @@
 import { Fatura } from "./(informations)/Faturas";
 import { HistoricoDePagamentos } from "./(informations)/HistoricoDePagamentos";
-import { MetodoDePagamento } from "./(informations)/MetedoDePagamento";
+import { MetodoDePagamento } from "./(informations)/MetodoDePagamento";
+import { NotificacaoDePagamentos } from "./(informations)/NotificacaoDePagamentos";
 import { TotalGasto } from "./(informations)/TotalGasto";
 
 export default function Faturamento() {
@@ -12,17 +13,14 @@ export default function Faturamento() {
                Gerencie suas faturas, pagamentos e planos de assinatura.
             </p>
          </div>
-         <div>
+         <div className="flex flex-col gap-8">
             <div className="flex gap-8">
                <HistoricoDePagamentos />
                <TotalGasto />
             </div>
-            <div>
-               <Fatura />
-            </div>
-            <div className="pt-8">
-               <MetodoDePagamento />
-            </div>   
+            <Fatura />
+            <MetodoDePagamento />
+            <NotificacaoDePagamentos />
          </div>
       </>
    )

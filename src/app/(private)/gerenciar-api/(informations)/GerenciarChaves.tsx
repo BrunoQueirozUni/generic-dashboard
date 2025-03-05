@@ -37,7 +37,7 @@ export function GerenciarChaves() {
                                  <Permissions id={item.id} />
                               </div>
                            </div>
-                           <hr className="border border-gray-800 my-3 " />
+                           <hr className="border border-gray-800 my-3" />
                         </div>
                      ))
                   }

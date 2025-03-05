@@ -4,7 +4,7 @@ import { MyAPIs } from "./(informations)/MyAPIs";
 import { LogsDeAcesso } from "./(informations)/LogsDeAcesso";
 import { GerenciarChaves } from "./(informations)/GerenciarChaves";
 import { GerarNovaChaveAPI } from "./(informations)/GerarNovaChaveAPI";
-import { MetodoDePagamento } from "../faturamento/(informations)/MetedoDePagamento";
+import { MetodoDePagamento } from "../faturamento/(informations)/MetodoDePagamento";
 
 export default function GerenciarAPI() {
    return (
