@@ -26,8 +26,8 @@ const cryptos = [
 export function MetodoDePagamento() {
    return (
       <>
-         <Card className="px-6 py-6">
-            <h1 className="text-2xl pb-4">Método de Pagamento</h1>
+         <Card className="px-6">
+            <h1 className="text-2xl py-6">Método de Pagamento</h1>
             <div className="flex gap-4 pb-6">
                <div className="flex flex-1 flex-col px-3 border-r border-gray-800">
                   <h2 className="text-center text-xl pb-5">Chaves PIXs</h2>
@@ -75,7 +75,7 @@ export function MetodoDePagamento() {
                   ))}
                </div>
             </div>
-            <CardContent>
+            <CardContent className="pb-6">
                <AdicionarMetodoDePagamento />
             </CardContent>
          </Card>

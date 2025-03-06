@@ -14,7 +14,6 @@ const items = [
 ]
 
 export function MyAPIs() {
-
    return (
       <>
          <div>
@@ -25,9 +24,7 @@ export function MyAPIs() {
                      items.map((item) => (
                         <div key={item.id}>
                            <div className="flex justify-between items-center px-6">
-                              <CardHeader>
-                                 <CardTitle className="text-base font-medium text-gray-400">{item.title}</CardTitle>
-                              </CardHeader>
+                              <h1 className="text-base font-medium text-gray-400">{item.title}</h1>
                               <CardContent className="px-5">
                                  <Badge variant="secondary" className={`px-5 py-1 ${item.bg} ${item.cor}`}>
                                     {item.value}

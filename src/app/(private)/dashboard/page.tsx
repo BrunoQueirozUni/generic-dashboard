@@ -13,7 +13,7 @@ export default function Dashboard() {
     <>
       <div className="text-white">
         <h1 className="text-3xl font-semibold">Dashboard</h1>
-        <p className="text-xl text-muted-foreground text-gray-400">
+        <p className="text-xl text-gray-400">
           Bem-vindo ao painel de controle de APIs
         </p>
       </div>
@@ -22,8 +22,8 @@ export default function Dashboard() {
         <SaldoDisponivel />
         <FaturasPendentes />
       </div>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-7">
-        <div className="col-span-4">
+      <div className="flex gap-8">
+        <div className="flex-1">
           <ApiUsageChart />
         </div>
         <UltimasChamadas />

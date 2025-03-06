@@ -15,7 +15,7 @@ export function Fatura() {
    return (
       <>
          <Card>
-            <h1 className="text-2xl py-4 px-6">Faturas</h1>
+            <h1 className="text-2xl py-6 px-6">Faturas</h1>
             <div className="px-6">
                <CardContent>
                   <table className="w-full border-collapse ">

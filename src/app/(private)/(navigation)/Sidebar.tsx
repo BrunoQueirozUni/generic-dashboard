@@ -3,19 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { LayoutDashboard, KeySquare, CreditCard, HeartOff } from "lucide-react";
+import { LayoutDashboard, KeySquare, CreditCard, ChartNoAxesColumnIncreasing } from "lucide-react";
 
 // Imagens
 import Logo from "../../../../public/imgs/pixtopayicon.png"
-import Faturamento from "../faturamento/page";
 
 const menuItems = [
    {
       title: "PRINCIPAL",
       items: [
-         { icon: LayoutDashboard, label: "Dashboard",      href: "/dashboard"     },
-         { icon: KeySquare,       label: "Gerenciar APIs", href: "/gerenciar-api" },
-         { icon: CreditCard,      label: "Faturamento",    href: "/faturamento"   },
+         { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
+         { icon: KeySquare, label: "Gerenciar APIs", href: "/gerenciar-api" },
+         { icon: CreditCard, label: "Faturamento", href: "/faturamento" },
+         { icon: ChartNoAxesColumnIncreasing, label: "Monitoramento", href: "/monitoramento" },
       ]
    }
 ]
@@ -39,7 +39,7 @@ export function Sidebar() {
                               <Link
                                  href={item.href}
                                  className="flex gap-2 text-sm text-gray-300 hover:text-primary hover:bg-gray-800/50 rounded-lg px-3 py-2 transition-colors"
-                                 >
+                              >
                                  {item.icon && <item.icon className="w-5 h-5" />}
                                  {item.label}
                               </Link>

@@ -16,16 +16,14 @@ const data = [
    { month: "out", gasto: 7490, },
    { month: "nov", gasto: 6490, },
    { month: "dez", gasto: 1490, },
- ]
- 
+]
+
 
 export function TotalGasto() {
    return (
       <>
          <Card className="flex-1 px-6">
-            <CardHeader className="p-4">
-               <CardTitle className="text-xl">Total de Gasto</CardTitle>
-            </CardHeader>
+            <CardTitle className="text-xl py-6">Total de Gasto</CardTitle>
             <CardContent className="pb-4">
                <ResponsiveContainer width="100%" height={350}>
                   <BarChart data={data}>

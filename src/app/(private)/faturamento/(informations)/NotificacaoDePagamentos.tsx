@@ -16,17 +16,17 @@ export function NotificacaoDePagamentos() {
    return (
       <>
          <Card>
-            <CardTitle className="px-6 py-6">Notificações de Pagamentos</CardTitle>
+            <h1 className="text-2xl px-6 py-6">Notificações de Pagamentos</h1>
             <CardContent>
                {
                   items.map((item, index) => (
                      <div key={index}>
-                        <div className="flex items-center justify-between py-3 px-6">
+                        <div className="flex items-center justify-between py-3 px-6 hover:bg-gray-800/30 transition">
                            <div className="flex gap-3 items-center">
                               <Switch.Root
                                  className="relative w-10 h-5 bg-gray-700 rounded-full transition 
                       data-[state=checked]:bg-primary focus:outline-none 
-                      focus:ring-2 focus:ring-primary"
+                      focus:ring-2 focus:ring-primary cursor-pointer"
                               >
                                  <Switch.Thumb
                                     className="block w-4 h-4 bg-white rounded-full transition-transform 

@@ -1,8 +1,8 @@
 import { Fatura } from "./(informations)/Faturas";
-import { HistoricoDePagamentos } from "./(informations)/HistoricoDePagamentos";
-import { MetodoDePagamento } from "./(informations)/MetodoDePagamento";
-import { NotificacaoDePagamentos } from "./(informations)/NotificacaoDePagamentos";
 import { TotalGasto } from "./(informations)/TotalGasto";
+import { MetodoDePagamento } from "./(informations)/MetodoDePagamento";
+import { HistoricoDePagamentos } from "./(informations)/HistoricoDePagamentos";
+import { NotificacaoDePagamentos } from "./(informations)/NotificacaoDePagamentos";
 
 export default function Faturamento() {
    return (
