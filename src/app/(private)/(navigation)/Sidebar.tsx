@@ -6,7 +6,7 @@ import Image from "next/image";
 import { LayoutDashboard, KeySquare, CreditCard, ChartNoAxesColumnIncreasing } from "lucide-react";
 
 // Imagens
-import Logo from "../../../../public/imgs/pixtopayicon.png"
+import Logo from "../../../../public/imgs/alterra.gif"
 
 const menuItems = [
    {
@@ -24,8 +24,7 @@ export function Sidebar() {
    return (
       <aside className="w-56 bg-gray-900/50 backdrop-blur-xl border-r border-gray-800 pt-6 px-4 hidden lg:flex lg:flex-col">
          <div className="flex justify-center items-center mb-8">
-            <Image src={Logo} width={40} height={40} alt="Logo" />
-            <span className="text-xl font-bold text-primary">PixToPay</span>
+            <Image src={Logo} width={90} height={90} alt="Logo" />
          </div>
          <nav className="flex-1">
             {

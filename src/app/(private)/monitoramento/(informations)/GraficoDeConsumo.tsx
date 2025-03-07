@@ -2,7 +2,7 @@
 
 import * as Tabs from "@radix-ui/react-tabs";
 
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts"
 
 

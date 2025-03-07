@@ -19,6 +19,8 @@ const buttonVariants = cva(
           "cursor-pointer bg-transparent border border-gray-700 hover:bg-gray-600",
         white: 
           "text-black bg-white hover:bg-gray-300 cursor-pointer",
+        transparent:
+          "bg-transparent",
       },
       size: {
         default: "h-10 px-4 py-2",

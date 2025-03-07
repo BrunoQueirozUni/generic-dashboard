@@ -1,19 +1,22 @@
+import { ErrosEFalhas } from "./(informations)/ErrosEFalhas";
 import { GraficoDeConsumo } from "./(informations)/GraficoDeConsumo";
 import { LatenciaMediaDasChamdas } from "./(informations)/LatenciaMediaDasChamadas";
+import { PageContent, PageDescription, PageHeader, PageTitle } from "@/components/ui/pageConfig";
 
 export default function Monitoramento() {
    return (
       <>
-         <div className="text-white">
-            <h1 className="text-3xl font-semibold">Monitoramento de Consumo da API</h1>
-            <p className="text-xl text-muted-foreground text-gray-400">
+         <PageHeader>
+            <PageTitle>Monitoramento de Consumo da API</PageTitle>
+            <PageDescription>
                Acompanhe o uso, desempenho e erros da sua API.
-            </p>
-         </div>
-         <div>
+            </PageDescription>
+         </PageHeader>
+         <PageContent className="flex-col">
             <GraficoDeConsumo />
             <LatenciaMediaDasChamdas />
-         </div>
+            <ErrosEFalhas />
+         </PageContent>
       </>
    )
 }

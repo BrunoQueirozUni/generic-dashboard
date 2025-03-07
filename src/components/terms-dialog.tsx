@@ -16,7 +16,7 @@ export function TermsDialog({ title, content, triggerText }: TermsDialogProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="link" className="p-0 h-auto text-[#9FE870] hover:underline cursor-pointer">
+        <Button variant="transparent" className="p-0 h-auto text-[#9FE870] hover:underline cursor-pointer">
           {triggerText}
         </Button>
       </DialogTrigger>
