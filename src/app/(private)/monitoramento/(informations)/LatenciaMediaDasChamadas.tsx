@@ -1,6 +1,6 @@
 "use client"
 
-import { Card } from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 const mediumData = [
@@ -22,8 +22,8 @@ const mediumData = [
 export function LatenciaMediaDasChamdas() {
    return (
       <>
-         <Card className="px-6 py-6">
-            <h1 className="text-2xl mb-6">Latência Média das Chamdas</h1>
+         <Card className="px-6">
+            <CardTitle className="py-6 px-0">Latência Média das Chamdas</CardTitle>
             <ResponsiveContainer width="100%" height={300}>
                <LineChart data={mediumData}>
                   <XAxis dataKey="date" />

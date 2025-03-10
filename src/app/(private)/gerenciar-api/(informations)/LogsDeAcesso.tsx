@@ -14,7 +14,7 @@ export function LogsDeAcesso() {
    return (
       <>
          <Card className="px-6">
-            <h1 className="text-2xl py-6 pb-8 font-normal">Logs de Acesso</h1>
+            <CardTitle className="py-6 pb-8 px-0">Logs de Acesso</CardTitle>
             <CardContent>
                <table className="w-full border-collapse">
                   <thead className="text-gray-400">

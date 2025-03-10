@@ -13,7 +13,7 @@ const data = [
   { name: "Dom", Diário: 3490, Semanal: 4300, Mensal: 2100 },
 ]
 
-export function ApiUsageChart() {
+export function ResumoDeUsoDaAPI() {
   return (
     <Card className="px-6 col-span-3">
       <CardHeader className="p-4">

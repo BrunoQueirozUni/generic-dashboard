@@ -14,27 +14,27 @@ export function HistoricoDePagamentos() {
    return (
       <>
          <Card className="flex-1">
-            <h1 className="text-2xl py-6 px-6">Histórico de Pagamentos</h1>
-            <div className="overflow-y-auto max-h-[340px] px-6">
+            <CardTitle className="py-6">Histórico de Pagamentos</CardTitle>
+            <CardContent className="overflow-y-auto max-h-[340px] px-6">
                {
                   items.map((item) => (
                      <div key={item.id} className="flex flex-col justify-center">
                         <div className="flex justify-between items-center py-2">
-                           <CardHeader>
-                              <CardTitle className="text-base font-medium">{item.date}</CardTitle>
+                           <div>
+                              <h1 className="text-base font-medium">{item.date}</h1>
                               <span className="text-gray-400">{item.value}</span>
-                           </CardHeader>
-                           <CardContent className="">
+                           </div>
+                           <div>
                               <Badge variant="secondary" className={`px-4 py-1 ${item.cor}`}>
                                  {item.status}
                               </Badge>
-                           </CardContent>
+                           </div>
                         </div>
                         <hr className="border border-gray-800" />
                      </div>
                   ))
                }
-            </div>
+            </CardContent>
          </Card>
       </>
    )

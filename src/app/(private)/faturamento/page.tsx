@@ -14,7 +14,6 @@ export default function Faturamento() {
                Gerencie suas faturas, pagamentos e planos de assinatura.
             </PageDescription>
          </PageHeader>
-
          <PageContent className="flex-col">
             <div className="flex gap-8">
                <HistoricoDePagamentos />

@@ -2,7 +2,7 @@
 
 import { Trash } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { AdicionarMetodoDePagamento } from "./components/AdicionarMetodoDePagamento";
 
 const pix = [
@@ -27,8 +27,8 @@ export function MetodoDePagamento() {
    return (
       <>
          <Card className="px-6">
-            <h1 className="text-2xl py-6">Método de Pagamento</h1>
-            <div className="flex gap-4 pb-6">
+            <CardTitle className="py-6">Método de Pagamento</CardTitle>
+            <CardContent className="flex gap-4 pb-6">
                <div className="flex flex-1 flex-col px-3 border-r border-gray-800">
                   <h2 className="text-center text-xl pb-5">Chaves PIXs</h2>
                   {pix.map((item) => (
@@ -74,10 +74,10 @@ export function MetodoDePagamento() {
                      </div>
                   ))}
                </div>
-            </div>
-            <CardContent className="pb-6">
-               <AdicionarMetodoDePagamento />
             </CardContent>
+            <div>
+               <AdicionarMetodoDePagamento />
+            </div>
          </Card>
       </>
    )

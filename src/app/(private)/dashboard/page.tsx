@@ -1,9 +1,9 @@
 "use client"
 
-import { AccoutStatus } from "./(informations)/AccountStatus";
-import { ApiUsageChart } from "./(informations)/ApiUsageChart";
+import { StatusDaConta } from "./(informations)/StatusDaConta";
 import { SaldoDisponivel } from "./(informations)/SaldoDisponivel";
 import { UltimasChamadas } from "./(informations)/UltimasChamadas";
+import { ResumoDeUsoDaAPI } from "./(informations)/ResumoDeUsoDaAPI";
 import { FaturasPendentes } from "./(informations)/FaturasPendentes";
 import { PageContent, PageDescription, PageHeader, PageTitle } from "@/components/ui/pageConfig";
 
@@ -18,14 +18,14 @@ export default function Dashboard() {
       </PageHeader>
 
       <PageContent>
-        <AccoutStatus />
+        <StatusDaConta />
         <SaldoDisponivel />
         <FaturasPendentes />
       </PageContent>
 
       <PageContent>
         <div className="flex-1">
-          <ApiUsageChart />
+          <ResumoDeUsoDaAPI />
         </div>
         <UltimasChamadas />
       </PageContent>

@@ -23,8 +23,8 @@ export function TotalGasto() {
    return (
       <>
          <Card className="flex-1 px-6">
-            <CardTitle className="text-xl py-6">Total de Gasto</CardTitle>
-            <CardContent className="pb-4">
+            <CardTitle className="py-6 px-0">Total de Gasto</CardTitle>
+            <CardContent>
                <ResponsiveContainer width="100%" height={350}>
                   <BarChart data={data}>
                      <XAxis dataKey="month" stroke="#FFFF" />

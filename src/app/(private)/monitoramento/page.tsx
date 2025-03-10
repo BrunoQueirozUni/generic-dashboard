@@ -1,5 +1,7 @@
+import { LimiteDeUso } from "./(informations)/LimiteDeUso";
 import { ErrosEFalhas } from "./(informations)/ErrosEFalhas";
 import { GraficoDeConsumo } from "./(informations)/GraficoDeConsumo";
+import { ConsumoPorChaveAPI } from "./(informations)/ConsumoPorChaveAPI";
 import { LatenciaMediaDasChamdas } from "./(informations)/LatenciaMediaDasChamadas";
 import { PageContent, PageDescription, PageHeader, PageTitle } from "@/components/ui/pageConfig";
 
@@ -16,6 +18,8 @@ export default function Monitoramento() {
             <GraficoDeConsumo />
             <LatenciaMediaDasChamdas />
             <ErrosEFalhas />
+            <ConsumoPorChaveAPI />
+            <LimiteDeUso />
          </PageContent>
       </>
    )

@@ -9,7 +9,7 @@ const items = [
    }
 ]
 
-export function AccoutStatus() {
+export function StatusDaConta() {
    return (
       <>
          {

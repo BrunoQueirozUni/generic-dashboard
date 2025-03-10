@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { LayoutDashboard, KeySquare, CreditCard, ChartNoAxesColumnIncreasing } from "lucide-react";
+import { LayoutDashboard, KeySquare, CreditCard, ChartNoAxesColumnIncreasing, Search } from "lucide-react";
 
 // Imagens
 import Logo from "../../../../public/imgs/alterra.gif"
@@ -16,6 +16,7 @@ const menuItems = [
          { icon: KeySquare, label: "Gerenciar APIs", href: "/gerenciar-api" },
          { icon: CreditCard, label: "Faturamento", href: "/faturamento" },
          { icon: ChartNoAxesColumnIncreasing, label: "Monitoramento", href: "/monitoramento" },
+         { icon: Search, label: "Consulta de Dados", href: "/consulta-de-dados" },
       ]
    }
 ]
@@ -31,7 +32,6 @@ export function Sidebar() {
                menuItems.map((section) => (
                   <div key={section.title} className="mb-6">
                      <h2 className="text-xs font-semibold text-gray-400 mb-2">{section.title}</h2>
-
                      <ul className="space-y-1">
                         {section.items.map((item) => (
                            <li key={item.label}>
@@ -45,7 +45,6 @@ export function Sidebar() {
                            </li>
                         ))}
                      </ul>
-
                   </div>
                ))
             }

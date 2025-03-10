@@ -17,19 +17,19 @@ export function GerenciarChaves() {
       <>
          <div className="flex-1">
             <Card>
-               <h1 className="text-2xl py-4 pb-8 px-6">Gerenciar Chaves</h1>
-               <div className="overflow-y-auto max-h-[150px] px-6">
+               <CardTitle className=" py-4 px-6">Gerenciar Chaves</CardTitle>
+               <CardContent className="overflow-y-auto max-h-[175px] px-6">
                   {
                      items.map((item) => (
                         <div key={item.id}>
                            <div className="flex">
-                              <div className="">
-                                 <CardHeader>
-                                    <CardTitle className="text-base font-medium text-gray-200">{item.key}</CardTitle>
-                                 </CardHeader>
-                                 <CardContent className="">
+                              <div>
+                                 <div>
+                                    <h1 className="text-base font-medium text-gray-200">{item.key}</h1>
+                                 </div>
+                                 <div>
                                     <span className="text-sm text-gray-400">Criado em: {item.date}</span>
-                                 </CardContent>
+                                 </div>
                               </div>
                               <div className="flex flex-1 items-center justify-end gap-3">
                                  <DeleteKey id={item.id} />
@@ -41,7 +41,7 @@ export function GerenciarChaves() {
                         </div>
                      ))
                   }
-               </div>
+               </CardContent>
             </Card>
          </div>
       </>

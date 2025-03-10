@@ -2,7 +2,7 @@
 
 import * as Tabs from "@radix-ui/react-tabs";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts"
 
 
@@ -36,7 +36,7 @@ export function GraficoDeConsumo() {
    return (
       <>
          <Card className="px-6">
-            <h1 className="text-2xl py-6">Gráficos de Consumo</h1>
+            <CardTitle className="py-6 px-0">Gráficos de Consumo</CardTitle>
             <CardContent className="mb-6">
                <Tabs.Root defaultValue="daily">
                   <Tabs.List className="mb-6 flex">

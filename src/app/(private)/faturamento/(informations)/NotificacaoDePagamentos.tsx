@@ -16,7 +16,7 @@ export function NotificacaoDePagamentos() {
    return (
       <>
          <Card>
-            <h1 className="text-2xl px-6 py-6">Notificações de Pagamentos</h1>
+            <CardTitle className="py-6">Notificações de Pagamentos</CardTitle>
             <CardContent>
                {
                   items.map((item, index) => (
@@ -35,13 +35,13 @@ export function NotificacaoDePagamentos() {
                               </Switch.Root>
                               <span className="text-gray-200">{item.email}</span>
                            </div>
-                           <Button variant="gray">Remover</Button>
+                           <Button variant="gray" className="hover:bg-red-500/40">Remover</Button>
                         </div>
                         <hr className="border border-gray-800 mx-6" />
                      </div>
                   ))
                }
-               <div className="px-6 py-6 flex gap-4">
+               <div className="px-6 pt-6 flex gap-4">
                   <Input type="email" placeholder="Novo E-mail para notificação" />
                   <Button variant="white">Adicionar</Button>
                </div>

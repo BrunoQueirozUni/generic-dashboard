@@ -17,24 +17,24 @@ export function MyAPIs() {
    return (
       <>
          <Card>
-            <h1 className="text-2xl py-4 pb-8 px-6">Minhas APIs</h1>
-            <div className="overflow-y-auto max-h-[370px]">
+            <CardTitle className="py-6 pb-6">Minhas APIs</CardTitle>
+            <CardContent className="overflow-y-auto max-h-[370px]">
                {
                   items.map((item) => (
                      <div key={item.id}>
                         <div className="flex justify-between items-center px-6">
                            <h1 className="text-base font-medium text-gray-400">{item.title}</h1>
-                           <CardContent className="px-6">
+                           <div className="px-6">
                               <Badge variant="secondary" className={`px-5 py-1 ${item.bg} ${item.cor}`}>
                                  {item.value}
                               </Badge>
-                           </CardContent>
+                           </div>
                         </div>
                         <hr className="border border-gray-800 my-5 ml-6 mr-11" />
                      </div>
                   ))
                }
-            </div>
+            </CardContent>
          </Card>
       </>
    )

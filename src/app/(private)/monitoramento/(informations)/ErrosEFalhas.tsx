@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 
 const logs = [
    { timestamp: "12/01/2025 - 10:00", endpoint: "/api/users", error: "401 Unauthorized", message: "Invalid API key" },
@@ -13,7 +13,7 @@ export function ErrosEFalhas() {
    return (
       <>
          <Card className="px-6">
-            <h1 className="text-2xl py-6 pb-8 font-normal">Erros e Falhas</h1>
+            <CardTitle className="py-6 pb-6 px-0 font-normal">Erros e Falhas</CardTitle>
             <CardContent>
                <table className="w-full border-collapse">
                   <thead className="text-gray-400">
