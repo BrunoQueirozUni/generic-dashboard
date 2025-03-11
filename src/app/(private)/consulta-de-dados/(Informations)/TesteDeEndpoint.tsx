@@ -27,10 +27,10 @@ export function TesteDeEndpoints() {
                <form onSubmit={handleSubmit}>
                   <div className="flex gap-4 pb-4">
                      <Select value={selectedValue} onValueChange={setSelectedValue}>
-                        <SelectTrigger className="w-[120px]">
+                        <SelectTrigger>
                            <SelectValue placeholder="Método" />
                         </SelectTrigger>
-                        <SelectContent className="bg-gray-900 text-white">
+                        <SelectContent>
                            <SelectItem value="GET">GET</SelectItem>
                            <SelectItem value="POST">POST</SelectItem>
                            <SelectItem value="PUT">PUT</SelectItem>
