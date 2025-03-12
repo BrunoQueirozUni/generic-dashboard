@@ -1,3 +1,4 @@
+import { ExportacaoDeLogsDasChamadas } from "./(Informations)/(components)/ExportacaoDeLogDasChamadas";
 import { FiltrosAvancados } from "./(Informations)/FiltrosAvancados";
 import { HistoricoDeConsulta } from "./(Informations)/HistoricoDeConsultas";
 import { TesteDeEndpoints } from "./(Informations)/TesteDeEndpoint";
@@ -16,6 +17,7 @@ export default function ConsultaDeDados() {
             <TesteDeEndpoints />
             <HistoricoDeConsulta />
             <FiltrosAvancados />
+            <ExportacaoDeLogsDasChamadas />
          </PageContent>
       </>
    )

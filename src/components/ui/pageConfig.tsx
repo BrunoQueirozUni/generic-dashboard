@@ -15,7 +15,6 @@ const PageHeader = React.forwardRef<
   />
 ))
 PageHeader.displayName = "PageHeader"
-
 const PageContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
