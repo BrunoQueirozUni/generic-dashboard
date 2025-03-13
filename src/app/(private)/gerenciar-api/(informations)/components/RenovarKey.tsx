@@ -28,10 +28,10 @@ export function RenovarKey({ id }: PermissionsProp) {
                   </Dialog.Title>
                   <div className="flex gap-4">
                      <Dialog.Close asChild>
-                        <Button variant="gray">Renovar</Button>
+                        <Button variant="white">Renovar</Button>
                      </Dialog.Close>
                      <Dialog.Close asChild>
-                        <Button variant="red">Cancelar</Button>
+                        <Button variant="gray">Cancelar</Button>
                      </Dialog.Close>
                   </div>
                </Dialog.Content>

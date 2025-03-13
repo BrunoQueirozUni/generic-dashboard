@@ -17,6 +17,7 @@ const menuItems = [
          { icon: CreditCard, label: "Faturamento", href: "/faturamento" },
          { icon: ChartNoAxesColumnIncreasing, label: "Monitoramento", href: "/monitoramento" },
          { icon: Search, label: "Consulta de Dados", href: "/consulta-de-dados" },
+         { icon: "", label: "Configurações", href: "/configuracoes" }
       ]
    }
 ]

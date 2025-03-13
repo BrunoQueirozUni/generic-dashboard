@@ -29,10 +29,10 @@ export function LimiteDeUso() {
                </p>
                {
                   usage >= 80 && (
-                     <div className="flex gap-3 border border-gray-600 rounded-md px-5 py-4">
-                        <Warning size={23} weight="light" />
+                     <div className="flex gap-3 text-yellow-800 dark:text-yellow-200 dark:bg-yellow-900/20 rounded-md px-5 py-4">
+                        <Warning size={25} weight="fill" />
                         <div>
-                           <h1>Atenção</h1>
+                           <h1>Atenção!</h1>
                            <p className="text-sm">Você está próximo do seu limite mensal de uso. Considere fazer um upgrade do seu plano</p>
                         </div>
                      </div>

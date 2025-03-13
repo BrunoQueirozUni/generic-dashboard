@@ -46,10 +46,10 @@ export function Permissions({ id }: PermissionsProp) {
                   </div>
                   <div className="flex gap-4">
                      <Dialog.Close asChild>
-                        <Button variant="green">Salvar</Button>
+                        <Button variant="white">Salvar</Button>
                      </Dialog.Close>
                      <Dialog.Close asChild>
-                        <Button variant="red">Cancelar</Button>
+                        <Button variant="gray">Cancelar</Button>
                      </Dialog.Close>
                   </div>
                </Dialog.Content>

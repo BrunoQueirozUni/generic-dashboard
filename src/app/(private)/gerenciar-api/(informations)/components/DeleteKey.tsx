@@ -28,7 +28,7 @@ export function DeleteKey({ id }: PermissionsProp) {
                   </Dialog.Title>
                   <div className="flex gap-4">
                      <Dialog.Close asChild>
-                        <Button variant="red">Excluir</Button>
+                        <Button variant="white">Excluir</Button>
                      </Dialog.Close>
                      <Dialog.Close asChild>
                         <Button variant="gray">Cancelar</Button>
