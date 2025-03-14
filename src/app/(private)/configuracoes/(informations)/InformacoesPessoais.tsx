@@ -11,7 +11,7 @@ export function InformacoesPessoais() {
 
    return (
       <>
-         <Card className="px-6">
+         <Card className="px-6 w-1/2">
             <CardTitle className="px-0 pt-6 pb-1">Informações Pessoais</CardTitle>
             <CardDescription className="text-sm text-gray-500">Atualize suas informações pessoais</CardDescription>
             <CardContent>
@@ -28,8 +28,16 @@ export function InformacoesPessoais() {
                      </div>
                      <div className="flex flex-col gap-4">
                         <div>
+                           <Label>Nome Completo</Label>
+                           <Input placeholder="Nome exemplo" className="mt-1" />
+                        </div>
+                        <div>
                            <Label>Email</Label>
                            <Input placeholder="usuario@exemplo.com" className="mt-1" />
+                        </div>
+                        <div>
+                           <Label>Email de recuperação</Label>
+                           <Input placeholder="usuariorecuperado@exemplo.com" className="mt-1" />
                         </div>
                         <div>
                            <Label>Telenfone</Label>

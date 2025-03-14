@@ -8,7 +8,7 @@ export function ConfiguracaoTabs() {
 
    return (
       <>
-         <Tabs.Root defaultValue="perfil">
+         <Tabs.Root defaultValue="perfil" className="w-full">
             <Tabs.List className="inline-flex">
                <div className="bg-zinc-700/50 rounded-md py-1 px-1 flex gap-2 text-white">
                   <Tabs.Trigger className="hover:bg-black data-[state=active]:bg-black cursor-pointer px-3 py-2 rounded-md" value="perfil">Perfil do Usuário</Tabs.Trigger>
@@ -17,7 +17,7 @@ export function ConfiguracaoTabs() {
                   <Tabs.Trigger className="hover:bg-black data-[state=active]:bg-black cursor-pointer px-3 py-2 rounded-md" value="integracao">Integrações</Tabs.Trigger>
                </div>
             </Tabs.List>
-            <Tabs.Content value="perfil" className="flex justify-between gap-8">
+            <Tabs.Content value="perfil" className="flex w-full gap-8 justify-between">
                <InformacoesPessoais />
                <div>
                   <Seguranca />
