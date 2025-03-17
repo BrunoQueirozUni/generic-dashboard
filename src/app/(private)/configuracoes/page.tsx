@@ -1,5 +1,5 @@
-import { PageContent, PageDescription, PageHeader, PageTitle } from "@/components/ui/pageConfig";
 import { ConfiguracaoTabs } from "./(informations)/ConfiguracaoTabs";
+import { PageContent, PageDescription, PageHeader, PageTitle } from "@/components/ui/pageConfig";
 
 export default function Configuracoes() {
    return (

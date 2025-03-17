@@ -4,7 +4,7 @@
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Avatars } from "./(components)/Avatars";
+import { Avatars } from "../(components)/Avatars";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 
 export function InformacoesPessoais() {

@@ -8,7 +8,7 @@ export function Seguranca() {
       <>
          <Card className="px-6">
             <CardTitle className="px-0 pt-6 pb-1">Segurança</CardTitle>
-            <CardDescription className="text-sm text-gray-500">Gerencie sua senha e autenticação de dois fatores</CardDescription>
+            <CardDescription>Gerencie sua senha e autenticação de dois fatores</CardDescription>
             <CardContent className="pt-6">
                <div className="flex flex-col gap-4">
                   <div>

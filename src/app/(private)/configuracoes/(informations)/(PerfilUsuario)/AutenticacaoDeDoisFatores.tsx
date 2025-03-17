@@ -3,8 +3,12 @@
 import * as Switch from "@radix-ui/react-switch";
 
 import { useState } from "react";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { CheckCircle, Warning } from "@phosphor-icons/react";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 export function AutenticacaoDeDoisFatores() {
    const [twoFactorEnabled, setTwoFactorEnabled] = useState(false)
@@ -21,7 +25,7 @@ export function AutenticacaoDeDoisFatores() {
       <>
          <Card className="px-6">
             <CardTitle className="px-0 pt-6 pb-1">Autenticação de Dois Fatores</CardTitle>
-            <CardDescription className="text-sm text-gray-500">Adicione uma camada extra de segurança à sua conta</CardDescription>
+            <CardDescription>Adicione uma camada extra de segurança à sua conta</CardDescription>
             <CardContent>
                <div className="flex gap-15 items-center py-6">
                   <div>
@@ -56,6 +60,39 @@ export function AutenticacaoDeDoisFatores() {
                   }
                </div>
             </CardContent>
+            <Dialog open={showTwoFactorDialog} onOpenChange={setShowTwoFactorDialog}>
+               <DialogContent>
+                  <DialogHeader className="text-white">
+                     <DialogTitle>Configurar Autenticação de Dois Fatores</DialogTitle>
+                     <DialogDescription>Escaneie o código QR abaixo com seu aplicativo de autenticação</DialogDescription>
+                  </DialogHeader>
+                  <div className="flex flex-col items-center justify-center space-y-4 text-white">
+                     <div className="bg-white p-4 inline-block">
+                        {/* Placeholder para o QR code */}
+                        <div className="w-48 h-48 bg-gray-200 text-black flex items-center justify-center">QR Code</div>
+                     </div>
+                     <div className="w-full space-y-2">
+                        <Label htmlFor="verification-code">Código de Verificação</Label>
+                        <Input id="verification-code" placeholder="Digite o código de 6 dígitos" className="mt-1" />
+                     </div>
+                     <div className="flex space-x-2 w-full">
+                        <Button variant="white" className="flex-1" onClick={() => setShowTwoFactorDialog(false)}>
+                           Verificar e Ativar
+                        </Button>
+                        <Button
+                           variant="gray"
+                           className="flex-1"
+                           onClick={() => {
+                              setTwoFactorEnabled(false)
+                              setShowTwoFactorDialog(false)
+                           }}
+                        >
+                           Cancelar
+                        </Button>
+                     </div>
+                  </div>
+               </DialogContent>
+            </Dialog>
          </Card>
       </>
    )

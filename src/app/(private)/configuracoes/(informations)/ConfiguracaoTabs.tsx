@@ -1,8 +1,10 @@
 import * as Tabs from "@radix-ui/react-tabs";
 
-import { Seguranca } from "./Seguranca";
-import { InformacoesPessoais } from "./InformacoesPessoais";
-import { AutenticacaoDeDoisFatores } from "./(components)/AutenticacaoDeDoisFatores";
+import { Seguranca } from "./(PerfilUsuario)/Seguranca";
+import { ConfiguracaoDeNotificacoes } from "./ConfiguracaoDeNotificacoes";
+import { InformacoesPessoais } from "./(PerfilUsuario)/InformacoesPessoais";
+import { AutenticacaoDeDoisFatores } from "./(PerfilUsuario)/AutenticacaoDeDoisFatores";
+import { EquipeEAcesso } from "./EquipeEAcesso";
 
 export function ConfiguracaoTabs() {
 
@@ -23,6 +25,12 @@ export function ConfiguracaoTabs() {
                   <Seguranca />
                   <AutenticacaoDeDoisFatores />
                </div>
+            </Tabs.Content>
+            <Tabs.Content value="notificacoes" className="flex">
+               <ConfiguracaoDeNotificacoes />
+            </Tabs.Content>
+            <Tabs.Content value="equipe">
+               <EquipeEAcesso />
             </Tabs.Content>
          </Tabs.Root>
       </>

@@ -23,15 +23,8 @@ export function NotificacaoDePagamentos() {
                      <div key={index}>
                         <div className="flex items-center justify-between py-3 px-6 hover:bg-gray-800/30 transition">
                            <div className="flex gap-3 items-center">
-                              <Switch.Root
-                                 className="relative w-10 h-5 bg-gray-700 rounded-full transition 
-                      data-[state=checked]:bg-primary focus:outline-none 
-                      focus:ring-2 focus:ring-primary cursor-pointer"
-                              >
-                                 <Switch.Thumb
-                                    className="block w-4 h-4 bg-white rounded-full transition-transform 
-                          transform translate-x-1 data-[state=checked]:translate-x-5"
-                                 />
+                              <Switch.Root className="relative w-10 h-5 bg-gray-700 rounded-full transition data-[state=checked]:bg-primary focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+                                 <Switch.Thumb className="block w-4 h-4 bg-white rounded-full transition-transform transform translate-x-1 data-[state=checked]:translate-x-5" />
                               </Switch.Root>
                               <span className="text-gray-200">{item.email}</span>
                            </div>
