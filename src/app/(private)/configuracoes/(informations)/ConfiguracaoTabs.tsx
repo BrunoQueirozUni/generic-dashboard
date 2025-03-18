@@ -5,6 +5,8 @@ import { ConfiguracaoDeNotificacoes } from "./ConfiguracaoDeNotificacoes";
 import { InformacoesPessoais } from "./(PerfilUsuario)/InformacoesPessoais";
 import { AutenticacaoDeDoisFatores } from "./(PerfilUsuario)/AutenticacaoDeDoisFatores";
 import { EquipeEAcesso } from "./EquipeEAcesso";
+import { Integracoes } from "./Integracoes";
+import Alert from "@/components/Alert";
 
 export function ConfiguracaoTabs() {
 
@@ -32,7 +34,12 @@ export function ConfiguracaoTabs() {
             <Tabs.Content value="equipe">
                <EquipeEAcesso />
             </Tabs.Content>
+            <Tabs.Content value="integracao">
+               <Integracoes />
+            </Tabs.Content>
          </Tabs.Root>
+
+         <Alert />
       </>
    )
 }
