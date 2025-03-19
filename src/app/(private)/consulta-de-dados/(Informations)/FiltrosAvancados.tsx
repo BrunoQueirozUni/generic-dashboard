@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { AlertCircle } from "lucide-react";
+import { Label } from "@/components/ui/label";
 
 // Dados simulados
 const allQueries = [
@@ -68,17 +69,19 @@ export function FiltrosAvancados() {
       <Card className="py-6 px-6">
         <CardTitle className="pb-6 px-0">Filtros Avançados</CardTitle>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="flex gap-4">
             <div>
-              <label className="block mb-2 text-sm font-medium">Data Inicial</label>
+              <Label className="block mb-2">Data Inicial</Label>
               <Input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
             </div>
             <div>
-              <label className="block mb-2 text-sm font-medium">Data Final</label>
+              <Label className="block mb-2">Data Final</Label>
               <Input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
             </div>
             <div>
-              <label className="block mb-2 text-sm font-medium">Status</label>
+              <Label className="block mb-2">
+                Status
+              </Label>
               <Select value={status} onValueChange={setStatus}>
                 <SelectTrigger className="w-[220px]">
                   <SelectValue placeholder="Selecione o status" />
@@ -95,9 +98,9 @@ export function FiltrosAvancados() {
               </Select>
             </div>
             <div>
-              <label className="block mb-2 text-sm font-medium">
+              <Label className="block mb-2">
                 Tipo de Resposta
-              </label>
+              </Label>
               <Select value={responseType} onValueChange={setResponseType}>
                 <SelectTrigger className="w-[170px]">
                   <SelectValue placeholder="Selecione o tipo" />
@@ -114,11 +117,11 @@ export function FiltrosAvancados() {
           <Button onClick={handlefilters} variant="white" className="mt-6">Aplicar Filtros</Button>
           {
             filtersApplied && (
-              <div className="mt-6">
+              <div className="mt-6 w-full flex-1">
                 <h3 className="text-lg font-semibold mb-2">Resultado Filtrados:</h3>
                 {
                   filteredQueries.length > 0 ? (
-                    <table className="w-full border-collapse ">
+                    <table className="w-full">
                       <thead className="text-gray-400">
                         <tr className="hover:bg-gray-800/70 transition duration-100">
                           <th className="text-left px-4 py-3">Métodos</th>

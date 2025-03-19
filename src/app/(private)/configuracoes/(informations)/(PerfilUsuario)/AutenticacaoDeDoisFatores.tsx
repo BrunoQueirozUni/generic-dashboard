@@ -45,7 +45,7 @@ export function AutenticacaoDeDoisFatores() {
                            <CheckCircle size={25} weight="fill" />
                            <div>
                               <h1>Autenticação de dois fatores está ativada</h1>
-                              <button className="text-sm hover:underline cursor-pointer p-0 m-0 text-green-700 dark:text-green-300"> clique para configurar novamente</button>
+                              <button onClick={() => setShowTwoFactorDialog(true)} className="text-sm hover:underline cursor-pointer p-0 m-0 text-green-700 dark:text-green-300"> clique para configurar novamente</button>
                            </div>
                         </div>
                      ) : (
