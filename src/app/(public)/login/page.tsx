@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 //import { useState } from "react"
+import { Metadata } from "next"
 import { Github } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -13,7 +14,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
 // Imagens
 import Logo from "../../../../public/imgs/alterra.gif"
-import { Metadata } from "next"
 
 export const metadata: Metadata = {
    title: "Login",
@@ -107,7 +107,7 @@ export default function LoginPage() {
                   <Separator className="bg-gray-700" />
 
                   <div className="grid grid-cols-2 gap-4">
-                     <Button variant="outline" className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700 cursor-pointer">
+                     <Button className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700 cursor-pointer">
                         <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                            <path
                               fill="currentColor"
@@ -128,7 +128,7 @@ export default function LoginPage() {
                         </svg>
                         Google
                      </Button>
-                     <Button variant="outline" className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700 cursor-pointer ">
+                     <Button className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700 cursor-pointer ">
                         <Github className="w-5 h-5 mr-2" />
                         GitHub
                      </Button>
@@ -139,7 +139,7 @@ export default function LoginPage() {
                      </Link>
                   </div>
                </CardContent>
-               <CardFooter className="justify-center pb-6">
+               <CardFooter>
                   <p className="text-sm text-gray-400">
                      Não tem uma conta?{" "}
                      <Link href="/register" className="text-primary hover:underline">

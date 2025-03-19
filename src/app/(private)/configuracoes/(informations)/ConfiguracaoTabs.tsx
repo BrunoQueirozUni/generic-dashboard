@@ -38,8 +38,6 @@ export function ConfiguracaoTabs() {
                <Integracoes />
             </Tabs.Content>
          </Tabs.Root>
-
-         <Alert />
       </>
    )
 }

@@ -22,7 +22,7 @@ const PageContent = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "flex gap-8",
+      "flex gap-8 focus:outline-none",
       className
     )}
     {...props}

@@ -8,7 +8,7 @@ export default function Configuracoes() {
             <PageTitle>Configurações da Conta</PageTitle>
             <PageDescription>Gerencie seu perfil, notificações, equipe e integrações.</PageDescription>
          </PageHeader>
-         <PageContent >
+         <PageContent>
             <ConfiguracaoTabs />
          </PageContent>
       </>

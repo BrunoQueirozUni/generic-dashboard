@@ -46,7 +46,7 @@ export default function RecoverPasswordPage() {
 
             <Button className="w-full bg-primary text-black hover:bg-primary/90">Enviar link de recuperação</Button>
           </CardContent>
-          <CardFooter className="justify-center pb-6 pt-6">
+          <CardFooter className="pt-6">
             <p className="text-sm text-gray-400">
               Lembrou sua senha?{" "}
               <Link href="/login" className="text-primary hover:underline">
