@@ -17,8 +17,8 @@ export function GerenciarChaves() {
       <>
          <div className="flex-1">
             <Card>
-               <CardTitle className=" py-4 px-6">Gerenciar Chaves</CardTitle>
-               <CardContent className="overflow-y-auto max-h-[175px] px-6">
+               <CardTitle className="py-4">Gerenciar Chaves</CardTitle>
+               <CardContent className="overflow-y-auto max-h-[175px]">
                   {
                      items.map((item) => (
                         <div key={item.id}>

@@ -8,6 +8,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+// Componente alert
+import { useAlert } from "@/components/Alert";
+
 interface TeamMember {
    id: number
    name: string
@@ -17,6 +20,9 @@ interface TeamMember {
 }
 
 export function EquipeEAcesso() {
+
+   const { showAlert } = useAlert();
+
    const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
       { id: 1, name: "John Doe", email: "johndoe@alterra.admin.corps", role: "Admin", avatar: "https://sm.ign.com/t/ign_br/screenshot/default/chiefman_nr9y.1200.jpg" },
       { id: 2, name: "Jane Doe", email: "janedoe@alterra.software.corps", role: "Developer", avatar: "" },
@@ -34,11 +40,15 @@ export function EquipeEAcesso() {
          setTeamMembers([...teamMembers, { id, name, ...newMember }])
          setNewMember({ email: "", role: "viewer" })
          setShowInviteForm(false)
+
+         showAlert("userInvited")
       }
    }
 
    const handleRemoveMember = (id: number) => {
       setTeamMembers(teamMembers.filter((member) => member.id !== id))
+      
+      showAlert("userRemove")
    }
 
    return (

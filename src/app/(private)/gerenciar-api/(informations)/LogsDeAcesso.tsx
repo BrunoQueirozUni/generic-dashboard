@@ -13,8 +13,8 @@ const logs = [
 export function LogsDeAcesso() {
    return (
       <>
-         <Card className="px-6">
-            <CardTitle className="py-6 pb-8 px-0">Logs de Acesso</CardTitle>
+         <Card>
+            <CardTitle>Logs de Acesso</CardTitle>
             <CardContent>
                <table className="w-full border-collapse">
                   <thead className="text-gray-400">

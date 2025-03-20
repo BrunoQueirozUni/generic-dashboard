@@ -5,8 +5,13 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Button } from "@/components/ui/button";
 import { MetodoDePagamentoTabs } from "./MetodoDePagamentoTabs";
 
+// Componente alert
+import { useAlert } from "@/components/Alert";
 
 export function AdicionarMetodoDePagamento() {
+
+   const { showAlert } = useAlert();
+
    return (
       <>
          <Dialog.Root>
@@ -27,7 +32,7 @@ export function AdicionarMetodoDePagamento() {
                   </div>
                   <div className="flex gap-4">
                      <Dialog.Close asChild>
-                        <Button variant="white">Salvar</Button>
+                        <Button onClick={() => showAlert("payment")} variant="white">Salvar</Button>
                      </Dialog.Close>
                      <Dialog.Close asChild>
                         <Button variant="gray">Cancelar</Button>

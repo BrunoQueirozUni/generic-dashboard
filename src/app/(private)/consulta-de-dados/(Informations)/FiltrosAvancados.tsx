@@ -1,12 +1,15 @@
 "use client"
 
 import { useState } from "react";
+import { AlertCircle } from "lucide-react";
+import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { AlertCircle } from "lucide-react";
-import { Label } from "@/components/ui/label";
+
+// Componente alert
+import { useAlert } from "@/components/Alert";
 
 // Dados simulados
 const allQueries = [
@@ -21,6 +24,9 @@ const allQueries = [
 ]
 
 export function FiltrosAvancados() {
+
+  const { showAlert } = useAlert();
+
   const [startDate, setStartDate] = useState(""); // Procura pela data inicial
   const [endDate, setEndDate] = useState(""); // Procura pela data final
   const [status, setStatus] = useState("todos"); // Procura pelo status
@@ -62,6 +68,8 @@ export function FiltrosAvancados() {
 
     setFilteredQueries(filtered)
     setFiltersApplied(true)
+
+    showAlert("filter")
   }
 
   return (

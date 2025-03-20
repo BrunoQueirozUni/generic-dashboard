@@ -15,11 +15,11 @@ const data = [
 
 export function ResumoDeUsoDaAPI() {
   return (
-    <Card className="px-6 col-span-3">
-      <CardHeader className="p-4">
+    <Card>
+      <CardHeader>
         <CardTitle className="text-xl">Resumo do Uso da API</CardTitle>
       </CardHeader>
-      <CardContent className="pb-3">
+      <CardContent>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={data}>
             <XAxis dataKey="name" stroke="#FFFF" />

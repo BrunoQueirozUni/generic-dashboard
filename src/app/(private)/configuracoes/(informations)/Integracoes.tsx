@@ -3,10 +3,13 @@
 import * as Switch from "@radix-ui/react-switch";
 
 import { useState } from "react";
-import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
+
+// Componente alert
+import { useAlert } from "@/components/Alert";
 
 interface Integration {
    id: string
@@ -17,6 +20,9 @@ interface Integration {
 }
 
 export function Integracoes() {
+
+   const { showAlert } = useAlert();
+
    const [integrations, setIntegrations] = useState<Integration[]>([
       {
          id: "webhook",
@@ -65,6 +71,7 @@ export function Integracoes() {
             ),
          )
          setActiveConfig(null)
+         showAlert("success")
       }
    }
 

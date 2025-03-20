@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 
@@ -5,6 +7,9 @@ import { items } from "../GerenciarChaves";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+
+// Componente alert
+import { useAlert } from "@/components/Alert";
 
 
 interface PermissionsProp {
@@ -21,6 +26,8 @@ const permissions = [
 ]
 
 export function Permissions({ id }: PermissionsProp) {
+
+   const { showAlert } = useAlert();
 
    const item = items.find((item) => item.id === id);
 
@@ -46,7 +53,7 @@ export function Permissions({ id }: PermissionsProp) {
                   </div>
                   <div className="flex gap-4">
                      <Dialog.Close asChild>
-                        <Button variant="white">Salvar</Button>
+                        <Button onClick={() => showAlert("success")} variant="white">Salvar</Button>
                      </Dialog.Close>
                      <Dialog.Close asChild>
                         <Button variant="gray">Cancelar</Button>

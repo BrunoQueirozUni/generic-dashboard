@@ -1,14 +1,21 @@
+"use client";
+
+import * as Dialog from "@radix-ui/react-dialog";
+
 import { items } from "../GerenciarChaves";
 import { Trash } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 
-import * as Dialog from "@radix-ui/react-dialog";
+// Componente alert
+import { useAlert } from "@/components/Alert";
 
 interface PermissionsProp {
    id?: Number;
 }
 
 export function DeleteKey({ id }: PermissionsProp) {
+
+   const { showAlert } = useAlert();
 
    const item = items.find((item) => item.id === id);
 
@@ -28,7 +35,7 @@ export function DeleteKey({ id }: PermissionsProp) {
                   </Dialog.Title>
                   <div className="flex gap-4">
                      <Dialog.Close asChild>
-                        <Button variant="white">Excluir</Button>
+                        <Button onClick={() => showAlert("itemRemoved")} variant="white">Excluir</Button>
                      </Dialog.Close>
                      <Dialog.Close asChild>
                         <Button variant="gray">Cancelar</Button>

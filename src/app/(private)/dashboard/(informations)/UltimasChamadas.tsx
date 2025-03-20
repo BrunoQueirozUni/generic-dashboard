@@ -1,6 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Pulse } from "@phosphor-icons/react";
 
 const items = [
    { id: 1, endpoint: "/api/users",         time: "120ms", status: 200 },
@@ -13,8 +12,8 @@ const items = [
 export function UltimasChamadas() {
    return (
       <>
-         <Card className="px-6 col-span-3">
-            <CardHeader className="flex flex-row justify-center space-x-10 px-5 pt-6 pb-7">
+         <Card>
+            <CardHeader className="flex flex-row justify-center space-x-10 px-8">
                <CardTitle className="text-xl">Últimas chamadas da API</CardTitle>
             </CardHeader>
             <CardContent className="px-5 pb-4">

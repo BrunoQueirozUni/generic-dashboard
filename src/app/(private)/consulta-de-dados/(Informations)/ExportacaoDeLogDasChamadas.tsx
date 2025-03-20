@@ -7,7 +7,13 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { DatePickerWithRange } from "@/components/ui/date-range-picker";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+// Componente alert
+import { useAlert } from "@/components/Alert";
+
 export function ExportacaoDeLogsDasChamadas() {
+
+   const { showAlert } = useAlert();
+
    const [format, setFormat] = useState("csv")
    const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined);
 
@@ -28,9 +34,10 @@ export function ExportacaoDeLogsDasChamadas() {
       element.download = `api_logs.${format}`
       document.body.appendChild(element)
       element.click()
+
+      showAlert("download")
    }
    
-
    return (
       <>
          <Card className="px-6">

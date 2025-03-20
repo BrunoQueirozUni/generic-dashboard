@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { AdicionarMetodoDePagamento } from "./components/AdicionarMetodoDePagamento";
 
+// Componente alert
+import { useAlert } from "@/components/Alert";
+
 const pix = [
    { id: 1, title: "johnwarhammer@imprium.com.mw" },
    { id: 2, title: "32rhio24HIF3iojrsdf43" },
@@ -24,10 +27,13 @@ const cryptos = [
 ]
 
 export function MetodoDePagamento() {
+
+   const { showAlert } = useAlert();
+
    return (
       <>
-         <Card className="px-6">
-            <CardTitle className="py-6">Método de Pagamento</CardTitle>
+         <Card>
+            <CardTitle>Método de Pagamento</CardTitle>
             <CardContent className="flex gap-4 pb-6">
                <div className="flex flex-1 flex-col px-3 border-r border-gray-800">
                   <h2 className="text-center text-xl pb-5">Chaves PIXs</h2>
@@ -37,7 +43,7 @@ export function MetodoDePagamento() {
                            <p>{item.title}</p>
                         </div>
                         <div className="flex justify-end">
-                           <Button title="Remover" className="bg-transparent border border-gray-600 hover:bg-red-500/40 cursor-pointer w-5 h-8 mb-2">
+                           <Button onClick={() => showAlert("itemRemoved")} title="Remover" className="bg-transparent border border-gray-600 hover:bg-red-500/40 cursor-pointer w-5 h-8 mb-2">
                               <Trash className="w-2 h-2" />
                            </Button>
                         </div>
@@ -52,7 +58,7 @@ export function MetodoDePagamento() {
                            <p>{item.title}</p>
                         </div>
                         <div className="flex justify-end">
-                           <Button title="Remover" className="bg-transparent border border-gray-600 hover:bg-red-500/40 cursor-pointer w-5 h-8 mb-2">
+                           <Button onClick={() => showAlert("itemRemoved")} title="Remover" className="bg-transparent border border-gray-600 hover:bg-red-500/40 cursor-pointer w-5 h-8 mb-2">
                               <Trash className="w-2 h-2" />
                            </Button>
                         </div>
@@ -67,7 +73,7 @@ export function MetodoDePagamento() {
                            <p>{item.title}</p>
                         </div>
                         <div className="flex justify-end">
-                           <Button title="Remover" className="bg-transparent border border-gray-600 hover:bg-red-500/40 cursor-pointer w-5 h-8 mb-2">
+                           <Button onClick={() => showAlert("itemRemoved")} title="Remover" className="bg-transparent border border-gray-600 hover:bg-red-500/40 cursor-pointer w-5 h-8 mb-2">
                               <Trash className="w-2 h-2" />
                            </Button>
                         </div>

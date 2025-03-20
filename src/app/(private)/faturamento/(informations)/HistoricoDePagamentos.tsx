@@ -14,8 +14,8 @@ export function HistoricoDePagamentos() {
    return (
       <>
          <Card className="flex-1">
-            <CardTitle className="py-6">Histórico de Pagamentos</CardTitle>
-            <CardContent className="overflow-y-auto max-h-[340px] px-6">
+            <CardTitle>Histórico de Pagamentos</CardTitle>
+            <CardContent className="overflow-y-auto max-h-[340px]">
                {
                   items.map((item) => (
                      <div key={item.id} className="flex flex-col justify-center">

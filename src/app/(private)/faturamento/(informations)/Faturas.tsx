@@ -15,8 +15,8 @@ export function Fatura() {
    return (
       <>
          <Card>
-            <CardTitle className="py-6">Faturas</CardTitle>
-            <CardContent className="px-6">
+            <CardTitle>Faturas</CardTitle>
+            <CardContent>
                <table className="w-full border-collapse ">
                   <thead className="text-gray-400">
                      <tr className="hover:bg-gray-800/70 transition duration-100">

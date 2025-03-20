@@ -1,4 +1,4 @@
-import { ExportacaoDeLogsDasChamadas } from "./(Informations)/(components)/ExportacaoDeLogDasChamadas";
+import { ExportacaoDeLogsDasChamadas } from "./(Informations)/ExportacaoDeLogDasChamadas";
 import { FiltrosAvancados } from "./(Informations)/FiltrosAvancados";
 import { HistoricoDeConsulta } from "./(Informations)/HistoricoDeConsultas";
 import { TesteDeEndpoints } from "./(Informations)/TesteDeEndpoint";

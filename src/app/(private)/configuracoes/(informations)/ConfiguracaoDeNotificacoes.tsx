@@ -1,3 +1,5 @@
+"use client"
+
 import * as Switch from "@radix-ui/react-switch";
 
 import { Button } from "@/components/ui/button";
@@ -11,7 +13,13 @@ const switchInfo = [
    { title: "Marketing", description: "Receba atualizações sobre novos recursos e ofertas" },
 ]
 
+// Componente alert
+import { useAlert } from "@/components/Alert";
+
 export function ConfiguracaoDeNotificacoes() {
+
+   const { showAlert } = useAlert();
+
    return (
       <>
          <Card className="px-6">
@@ -36,7 +44,7 @@ export function ConfiguracaoDeNotificacoes() {
                      ))
                   }
                </div>
-               <Button variant="white" className="mt-6">Salvar Alterações</Button>
+               <Button onClick={() => showAlert("success")} variant="white" className="mt-6">Salvar Alterações</Button>
             </CardContent>
          </Card>
       </>

@@ -1,13 +1,17 @@
 "use client"
 
-//import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Avatars } from "../(components)/Avatars";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 
+// Componente alert
+import { useAlert } from "@/components/Alert";
+
 export function InformacoesPessoais() {
+
+   const { showAlert } = useAlert();
 
    return (
       <>
@@ -49,7 +53,7 @@ export function InformacoesPessoais() {
                         </div>
                      </div>
                   </div>
-                  <Button variant="white" className="mt-6">Salver Alterações</Button>
+                  <Button onClick={() => showAlert("success")} variant="white" className="mt-6">Salver Alterações</Button>
                </div>
             </CardContent>
          </Card>

@@ -1,9 +1,17 @@
+"use client"
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 
+// Componente alert
+import { useAlert } from "@/components/Alert";
+
 export function Seguranca() {
+
+   const { showAlert } = useAlert();
+
    return (
       <>
          <Card className="px-6">
@@ -24,7 +32,7 @@ export function Seguranca() {
                      <Input placeholder="Confirme sua nova senha" className="mt-1" />
                   </div>
                </div>
-               <Button variant="white" className="mt-6">Atualizar senha</Button>
+               <Button onClick={() => showAlert("alteracao")} variant="white" className="mt-6">Atualizar senha</Button>
             </CardContent>
          </Card>
       </>

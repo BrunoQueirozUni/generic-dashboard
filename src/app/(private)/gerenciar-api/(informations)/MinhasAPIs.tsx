@@ -13,11 +13,11 @@ const items = [
    { id: 9, title: "RHAPI", value: "Ativa", cor: "text-green-500", bg: "bg-green-500/20" },
 ]
 
-export function MyAPIs() {
+export function MinhasAPIs() {
    return (
       <>
          <Card>
-            <CardTitle className="py-6 pb-6">Minhas APIs</CardTitle>
+            <CardTitle>Minhas APIs</CardTitle>
             <CardContent className="overflow-y-auto max-h-[370px]">
                {
                   items.map((item) => (

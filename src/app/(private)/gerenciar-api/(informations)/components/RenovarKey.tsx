@@ -1,14 +1,21 @@
+"use client"
+
+import * as Dialog from "@radix-ui/react-dialog";
+
 import { items } from "../GerenciarChaves";
 import { Button } from "@/components/ui/button";
 import { ArrowsClockwise } from "@phosphor-icons/react";
 
-import * as Dialog from "@radix-ui/react-dialog";
+// Componente alert
+import { useAlert } from "@/components/Alert";
 
 interface PermissionsProp {
    id: Number;
 }
 
 export function RenovarKey({ id }: PermissionsProp) {
+
+   const { showAlert } = useAlert();
 
    const item = items.find((item) => item.id === id);
 
@@ -28,7 +35,7 @@ export function RenovarKey({ id }: PermissionsProp) {
                   </Dialog.Title>
                   <div className="flex gap-4">
                      <Dialog.Close asChild>
-                        <Button variant="white">Renovar</Button>
+                        <Button onClick={() => showAlert("renovarChave")} variant="white">Renovar</Button>
                      </Dialog.Close>
                      <Dialog.Close asChild>
                         <Button variant="gray">Cancelar</Button>
