@@ -12,8 +12,8 @@ const logs = [
 export function ErrosEFalhas() {
    return (
       <>
-         <Card className="px-6">
-            <CardTitle className="py-6 pb-6 px-0 font-normal">Erros e Falhas</CardTitle>
+         <Card>
+            <CardTitle>Erros e Falhas</CardTitle>
             <CardContent>
                <table className="w-full border-collapse">
                   <thead className="text-gray-400">

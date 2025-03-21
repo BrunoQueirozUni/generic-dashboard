@@ -40,8 +40,8 @@ export function ExportacaoDeLogsDasChamadas() {
    
    return (
       <>
-         <Card className="px-6">
-            <CardTitle className="py-6 px-0">Exportação de Logs das Chamadas</CardTitle>
+         <Card>
+            <CardTitle>Exportação de Logs das Chamadas</CardTitle>
             <CardContent>
                <div className="flex gap-4">
                   <div>

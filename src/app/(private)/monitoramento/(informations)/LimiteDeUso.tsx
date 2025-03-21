@@ -12,9 +12,9 @@ export function LimiteDeUso() {
 
    return (
       <>
-         <Card className="py-6">
-            <CardTitle className="px-6 pb-6">Limite de Uso</CardTitle>
-            <CardContent className="px-6">
+         <Card>
+            <CardTitle>Limite de Uso</CardTitle>
+            <CardContent>
                <Progress.Root
                   className="relative h-[20px] overflow-hidden rounded-full mb-3 border border-gray-700"
                   value={usage}

@@ -11,9 +11,9 @@ export function HistoricoDeConsulta() {
   return (
     <>
       <Card>
-        <CardTitle className="py-6">Histórico de Consultas</CardTitle>
-        <CardContent className="px-6">
-          <table className="w-full border-collapse ">
+        <CardTitle>Histórico de Consultas</CardTitle>
+        <CardContent>
+          <table className="w-full border-collapse">
             <thead className="text-gray-400">
               <tr className="hover:bg-gray-800/70 transition duration-100">
                 <th className="text-left px-4 py-3">Métodos</th>

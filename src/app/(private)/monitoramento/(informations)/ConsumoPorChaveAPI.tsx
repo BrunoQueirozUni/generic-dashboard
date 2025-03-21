@@ -21,8 +21,8 @@ const data = [
 export function ConsumoPorChaveAPI() {
    return (
       <>
-         <Card className="flex-1 px-6">
-            <CardTitle className="py-6 px-0">Consumo por API Key</CardTitle>
+         <Card>
+            <CardTitle>Consumo por API Key</CardTitle>
             <CardContent>
                <ResponsiveContainer width="100%" height={350}>
                   <BarChart data={data}>

@@ -21,8 +21,8 @@ export function TesteDeEndpoints() {
 
    return (
       <>
-         <Card className="px-6">
-            <CardTitle className="py-6 px-0">Teste de Endpoints</CardTitle>
+         <Card>
+            <CardTitle  >Teste de Endpoints</CardTitle>
             <CardContent>
                <form onSubmit={handleSubmit}>
                   <div className="flex gap-4 pb-4">

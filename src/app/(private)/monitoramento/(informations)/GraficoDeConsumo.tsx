@@ -35,9 +35,9 @@ const monthlyData = [
 export function GraficoDeConsumo() {
    return (
       <>
-         <Card className="px-6">
-            <CardTitle className="py-6 px-0">Gráficos de Consumo</CardTitle>
-            <CardContent className="mb-6">
+         <Card>
+            <CardTitle>Gráficos de Consumo</CardTitle>
+            <CardContent>
                <Tabs.Root defaultValue="daily">
                   <Tabs.List className="mb-6 flex">
                      <div className="bg-gray-950 rounded-md py-2 px-2 flex gap-2">

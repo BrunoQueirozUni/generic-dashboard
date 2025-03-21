@@ -74,8 +74,8 @@ export function FiltrosAvancados() {
 
   return (
     <>
-      <Card className="py-6 px-6">
-        <CardTitle className="pb-6 px-0">Filtros Avançados</CardTitle>
+      <Card>
+        <CardTitle>Filtros Avançados</CardTitle>
         <CardContent>
           <div className="flex gap-4">
             <div>
