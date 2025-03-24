@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export function TesteDeEndpoints() {
    const [selectedValue, setSelectedValue] = useState("GET");
@@ -22,7 +22,7 @@ export function TesteDeEndpoints() {
    return (
       <>
          <Card>
-            <CardTitle  >Teste de Endpoints</CardTitle>
+            <CardTitle>Teste de Endpoints</CardTitle>
             <CardContent>
                <form onSubmit={handleSubmit}>
                   <div className="flex gap-4 pb-4">

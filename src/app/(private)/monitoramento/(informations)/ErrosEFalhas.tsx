@@ -1,4 +1,5 @@
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const logs = [
    { timestamp: "12/01/2025 - 10:00", endpoint: "/api/users", error: "401 Unauthorized", message: "Invalid API key" },
@@ -15,26 +16,26 @@ export function ErrosEFalhas() {
          <Card>
             <CardTitle>Erros e Falhas</CardTitle>
             <CardContent>
-               <table className="w-full border-collapse">
-                  <thead className="text-gray-400">
-                     <tr className="hover:bg-gray-800/70 transition duration-100">
-                        <th className="text-left px-4 py-3">Timestamp</th>
-                        <th className="text-left px-4 py-3">Endpoint</th>
-                        <th className="text-left px-4 py-3">Error</th>
-                        <th className="text-left px-4 py-3">Mensagem</th>
-                     </tr>
-                  </thead>
-                  <tbody>
+               <Table>
+                  <TableHeader>
+                     <TableRow>
+                        <TableHead>Timestamp</TableHead>
+                        <TableHead>Endpoint</TableHead>
+                        <TableHead>Error</TableHead>
+                        <TableHead>Mensagem</TableHead>
+                     </TableRow>
+                  </TableHeader>
+                  <TableBody>
                      {logs.map((log, index) => (
-                        <tr key={index} className="border-t border-gray-800 hover:bg-gray-800/70 transition duration-100">
-                           <td className="px-4 py-3">{log.timestamp}</td>
-                           <td className="px-4 py-3">{log.endpoint}</td>
-                           <td className="px-4 py-3">{log.error}</td>
-                           <td className="px-4 py-3">{log.message}</td>
-                        </tr>
+                        <TableRow key={index}>
+                           <TableCell>{log.timestamp}</TableCell>
+                           <TableCell>{log.endpoint}</TableCell>
+                           <TableCell>{log.error}</TableCell>
+                           <TableCell>{log.message}</TableCell>
+                        </TableRow>
                      ))}
-                  </tbody>
-               </table>
+                  </TableBody>
+               </Table>
             </CardContent>
          </Card>
       </>

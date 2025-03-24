@@ -1,4 +1,5 @@
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const items = [
   { data: "GET",   valor: "/api/v1/users",   status: "200", timestamp: "2023-10-01 12:34:56" },
@@ -13,29 +14,26 @@ export function HistoricoDeConsulta() {
       <Card>
         <CardTitle>Histórico de Consultas</CardTitle>
         <CardContent>
-          <table className="w-full border-collapse">
-            <thead className="text-gray-400">
-              <tr className="hover:bg-gray-800/70 transition duration-100">
-                <th className="text-left px-4 py-3">Métodos</th>
-                <th className="text-left px-4 py-3">URL</th>
-                <th className="text-left px-4 py-3">Status</th>
-                <th className="text-left px-4 py-3">Timestamp</th>
-              </tr>
-            </thead>
-            <tbody>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Métodos</TableHead>
+                <TableHead>URL</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead>Timestamp</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
               {items.map((items, index) => (
-                <tr
-                  key={index}
-                  className="border-t border-gray-800 hover:bg-gray-800/70 transition duration-100"
-                >
-                  <td className="px-4 py-3">{items.data}</td>
-                  <td className="px-4 py-3">{items.valor}</td>
-                  <td className="px-4 py-3">{items.status}</td>
-                  <td className="px-4 py-3">{items.timestamp}</td>
-                </tr>
+                <TableRow key={index}>
+                  <TableCell>{items.data}</TableCell>
+                  <TableCell>{items.valor}</TableCell>
+                  <TableCell>{items.status}</TableCell>
+                  <TableCell>{items.timestamp}</TableCell>
+                </TableRow>
               ))}
-            </tbody>
-          </table>
+            </TableBody>
+          </Table>
         </CardContent>
       </Card>
     </>

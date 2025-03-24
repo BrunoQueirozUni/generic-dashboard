@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 // Componente alert
@@ -129,31 +130,28 @@ export function FiltrosAvancados() {
                 <h3 className="text-lg font-semibold mb-2">Resultado Filtrados:</h3>
                 {
                   filteredQueries.length > 0 ? (
-                    <table className="w-full">
-                      <thead className="text-gray-400">
-                        <tr className="hover:bg-gray-800/70 transition duration-100">
-                          <th className="text-left px-4 py-3">Métodos</th>
-                          <th className="text-left px-4 py-3">URL</th>
-                          <th className="text-left px-4 py-3">Status</th>
-                          <th className="text-left px-4 py-3">Timestamp</th>
-                          <th className="text-left px-4 py-3">Tipo de resposta</th>
-                        </tr>
-                      </thead>
-                      <tbody>
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Métodos</TableHead>
+                          <TableHead>URL</TableHead>
+                          <TableHead>Status</TableHead>
+                          <TableHead>Timestamp</TableHead>
+                          <TableHead>Tipo de resposta</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
                         {filteredQueries.map((query) => (
-                          <tr
-                            key={query.id}
-                            className="border-t border-gray-800 hover:bg-gray-800/70 transition duration-100"
-                          >
-                            <td className="px-4 py-3">{query.method}</td>
-                            <td className="px-4 py-3">{query.url}</td>
-                            <td className="px-4 py-3">{query.status}</td>
-                            <td className="px-4 py-3">{query.timestamp}</td>
-                            <td className="px-4 py-3">{query.responseType}</td>
-                          </tr>
+                          <TableRow key={query.id}>
+                            <TableCell>{query.method}</TableCell>
+                            <TableCell>{query.url}</TableCell>
+                            <TableCell>{query.status}</TableCell>
+                            <TableCell>{query.timestamp}</TableCell>
+                            <TableCell>{query.responseType}</TableCell>
+                          </TableRow>
                         ))}
-                      </tbody>
-                    </table>
+                      </TableBody>
+                    </Table>
                   ) : (
                     <p className="flex gap-2 border p-3 rounded-md text-gray-400">
                       <AlertCircle size={24} />
