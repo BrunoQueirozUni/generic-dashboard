@@ -4,8 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { usePathname } from "next/navigation";
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { LayoutDashboard, KeySquare, CreditCard, ChartNoAxesColumnIncreasing, Search, Settings } from "lucide-react";
+import { LayoutDashboard, KeySquare, CreditCard, ChartNoAxesColumnIncreasing, Search, Settings, Headset, FileText, BookText } from "lucide-react";
 
 // Imagens
 import Logo from "../../../../public/imgs/alterra.gif"
@@ -21,6 +20,14 @@ const menuItems = [
          { icon: Search, label: "Consulta de Dados", href: "/consulta-de-dados" },
       ]
    },
+   {
+      title: "SUPORTE",
+      items: [
+         { icon: BookText, label: "Documentação", href: "/documentacao" },
+         { icon: FileText, label: "Relatórios", href: "/relatorios" },
+         { icon: Headset, label: "Suporte", href: "/suporte" },
+      ]
+   }
 ]
 
 const user = {
@@ -36,44 +43,25 @@ export function Sidebar() {
          <div className="flex justify-center items-center mb-8">
             <Image src={Logo} width={90} height={90} alt="Logo" />
          </div>
-         <nav className="h-full">
+         <nav className="space-y-4">
             {
                menuItems.map((section) => (
-                  <div key={section.title} className="h-full">
+                  <div key={section.title}>
                      <h2 className="text-xs font-semibold text-gray-400 mb-2">{section.title}</h2>
-                     <div className="flex flex-col justify-between h-full">
-                        <ul className="space-y-1">
-                           {section.items?.map((item) => (
-                              <li key={item.label}>
-                                 <Link
-                                    href={item.href}
-                                    className={`flex gap-2 text-sm rounded-lg px-3 py-2 transition-colors ${pathname === item.href ? "text-primary" : "text-gray-300 hover:text-primary hover:bg-gray-800/50"
-                                       }`}
-                                 >
-                                    {item.icon && <item.icon className="w-5 h-5" />}
-                                    {item.label}
-                                 </Link>
-                              </li>
-                           ))}
-                        </ul>
-                        <ul className="flex flex-col justify-end">
-                           <div key={section.title} className="flex items-center justify-between py-6">
-                              <div className="flex items-center gap-2">
-                                 <Avatar className="size-[50px] select-none items-center justify-center overflow-hidden rounded-full">
-                                    <AvatarImage className="size-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMeYKkxEQ7Yc8s1y46bs1i18BHtjlbe50CQQ&s" alt="" />
-                                    <AvatarFallback className="flex size-full items-center justify-center bg-gray-600 font-medium">AKA</AvatarFallback>
-                                 </Avatar>
-                                 <span className="text-white font-semibold">Guilliman</span>
-                              </div>
-                              <Link href={user.href}
-                                 className="text-gray-300 hover:text-primary hover:bg-gray-800/50 rounded-lg transition-colors p-3"
+                     <ul className="space-y-1">
+                        {section.items?.map((item) => (
+                           <li key={item.label}>
+                              <Link
+                                 href={item.href}
+                                 className={`flex gap-2 text-sm rounded-lg px-3 py-2 transition-colors ${pathname === item.href ? "text-primary" : "text-gray-300 hover:text-primary hover:bg-gray-800/50"
+                                    }`}
                               >
-                                 {user.icon && <user.icon className="w-6 h-6" />}
-                                 {user.label}
+                                 {item.icon && <item.icon className="w-5 h-5" />}
+                                 {item.label}
                               </Link>
-                           </div>
-                        </ul>
-                     </div>
+                           </li>
+                        ))}
+                     </ul>
                   </div>
                ))
             }
