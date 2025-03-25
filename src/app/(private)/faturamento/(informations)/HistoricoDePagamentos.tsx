@@ -2,12 +2,12 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const items = [
-   { id: 1, date: "02/02/2025", value: "R$ 200,00",  status: "pago",     cor: "bg-green-500"  },
-   { id: 2, date: "25/01/2025", value: "R$ 4500,00", status: "pendente", cor: "bg-orange-500" },
-   { id: 3, date: "23/01/2025", value: "R$ 240,00",  status: "pago",     cor: "bg-green-500"  },
-   { id: 4, date: "22/01/2025", value: "R$ 3240,00", status: "pago",     cor: "bg-green-500"  },
-   { id: 5, date: "10/01/2025", value: "R$ 3015,00", status: "pendente", cor: "bg-orange-500" },
-   { id: 6, date: "05/01/2025", value: "R$ 500,00",  status: "pago",     cor: "bg-green-500"  },
+   { id: 1, date: "02/02/2025", value: "R$ 200,00",  status: "pago"     },
+   { id: 2, date: "25/01/2025", value: "R$ 4500,00", status: "pendente" },
+   { id: 3, date: "23/01/2025", value: "R$ 240,00",  status: "pago"     },
+   { id: 4, date: "22/01/2025", value: "R$ 3240,00", status: "pago"     },
+   { id: 5, date: "10/01/2025", value: "R$ 3015,00", status: "pendente" },
+   { id: 6, date: "05/01/2025", value: "R$ 500,00",  status: "pago"     },
 ]
 
 export function HistoricoDePagamentos() {
@@ -25,7 +25,7 @@ export function HistoricoDePagamentos() {
                               <span className="text-gray-400">{item.value}</span>
                            </div>
                            <div>
-                              <Badge variant="secondary" className={`px-4 py-1 ${item.cor}`}>
+                              <Badge variant={item.status === "pago" ? "default" : "yellow"} className="px-4 py-1">
                                  {item.status}
                               </Badge>
                            </div>

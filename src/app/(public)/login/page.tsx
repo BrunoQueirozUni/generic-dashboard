@@ -30,20 +30,20 @@ export default function LoginPage() {
 
    return (
       <div className="w-full flex items-center justify-center">
-         <div className="w-full max-w-[400px] space-y-6">
+         <div className="w-full max-w-[400px]">
             <div className="flex flex-col items-center space-y-2">
                <Image
                   src={Logo}
                   alt="Logo"
                   width={100}
                   height={100}
-                  className="mb-4 select-none"
+                  className="mb-2 select-none"
                />
                <h1 className="text-2xl font-bold text-white">Bem-vindo!</h1>
                <p className="text-sm text-gray-400">Entre na sua conta para continuar</p>
             </div>
 
-            <Card className="border-0 bg-gray-900/50 backdrop-blur-xl px-5">
+            <Card className="border-0 bg-gray-900/50 backdrop-blur-xl">
                <CardContent className="space-y-4 pt-6">
                   <div className="space-y-2">
                      <div>
@@ -98,7 +98,7 @@ export default function LoginPage() {
                      <Button className="w-full bg-primary text-black hover:bg-primary/90 cursor-pointer">Entrar</Button>
                   </Link>
 
-                  <div className="flex justify-center pb-2 pt-6">
+                  <div className="flex justify-center pb-2 pt-5">
                      <Link href="/login/recuperar-senha" className="text-[13px] text-primary hover:underline">
                         Esqueceu sua senha?
                      </Link>
@@ -134,7 +134,7 @@ export default function LoginPage() {
                      </Button>
                   </div>
                   <div className="text-center my-5">
-                     <Link href="/configurar-2fa" className="text-xs text-primary hover:underline">
+                     <Link href="/configurar-2fa" className="text-sm text-primary hover:underline">
                         Configurar autenticação de dois fatores
                      </Link>
                   </div>

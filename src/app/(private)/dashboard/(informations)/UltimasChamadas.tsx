@@ -26,15 +26,7 @@ export function UltimasChamadas() {
                               <span className="text-xs text-gray-500">{item.time}</span>
                            </div>
                            <div className="ml-auto font-medium">
-                              <Badge
-                                 variant="secondary"
-                                 className={`${item.status === 200
-                                       ? "bg-green-500/20 text-green-500"
-                                       : item.status === 404
-                                          ? "bg-yellow-500/20 text-yellow-500"
-                                          : "bg-red-500/20 text-red-500"
-                                    }`}
-                              >
+                              <Badge variant={item.status === 200 ? "default" : item.status === 404 ? "yellow" : "red"}>
                                  {item.status}
                               </Badge>
                            </div>

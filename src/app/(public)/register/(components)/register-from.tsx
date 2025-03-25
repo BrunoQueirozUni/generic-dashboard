@@ -6,12 +6,12 @@ import registerAction from "@/ts/registerAction"
 import { Label } from "@radix-ui/react-label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Checkbox } from "@radix-ui/react-checkbox"
 import { TermsDialog } from "@/components/terms-dialog"
 
 // Termos e condições
 import { TermsContent } from "./TermsContent"
 import { PrivacyContent } from "./PrivancyContent"
+import { Checkbox } from "@/components/ui/checkbox"
 
 export default function RegisterForm() {
 
@@ -25,7 +25,7 @@ export default function RegisterForm() {
 
    return (
       <>
-         <Form action={registerAction} className="space-y-4 pt-6 px-5">
+         <Form action={registerAction} className="space-y-4 pt-6">
             <div className="grid grid-cols-2 gap-4">
                {/* Nome */}
                <div className="space-y-2">

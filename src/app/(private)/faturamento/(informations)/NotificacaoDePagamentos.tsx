@@ -29,7 +29,7 @@ export function NotificacaoDePagamentos() {
                {
                   items.map((item, index) => (
                      <div key={index}>
-                        <div className="flex items-center justify-between py-3 hover:bg-gray-800/30 transition">
+                        <div className="flex items-center justify-between py-3 px-3 rounded-md hover:bg-gray-800/30 transition">
                            <div className="flex gap-3 items-center">
                               <Switch.Root className="relative w-10 h-5 bg-gray-700 rounded-full transition data-[state=checked]:bg-primary focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
                                  <Switch.Thumb className="block w-4 h-4 bg-white rounded-full transition-transform transform translate-x-1 data-[state=checked]:translate-x-5" />
@@ -42,7 +42,7 @@ export function NotificacaoDePagamentos() {
                      </div>
                   ))
                }
-               <div className="px-6 pt-6 flex gap-4">
+               <div className="pt-6 flex gap-4">
                   <Input type="email" placeholder="Novo E-mail para notificação" />
                   <Button onClick={() => showAlert("item")} variant="white">Adicionar</Button>
                </div>

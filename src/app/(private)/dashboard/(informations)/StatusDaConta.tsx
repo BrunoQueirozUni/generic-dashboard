@@ -21,7 +21,7 @@ export function StatusDaConta() {
                   </CardHeader>
                   <CardContent>
                      <div className="text-2xl">{item.value}</div>
-                     <Badge variant="outline" className="mt-2 bg-green-500/20 text-green-500">
+                     <Badge variant="default" className="mt-2">
                         Ativa
                      </Badge>
                   </CardContent>

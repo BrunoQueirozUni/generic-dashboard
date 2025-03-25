@@ -2,15 +2,15 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const items = [
-   { id: 1, title: "UsuáriosAPI", value: "Ativa", cor: "text-green-500", bg: "bg-green-500/20" },
-   { id: 2, title: "ProdutosAPI", value: "Ativa", cor: "text-green-500", bg: "bg-green-500/20" },
-   { id: 3, title: "VendasAPI", value: "Inativa", cor: "text-gray-500", bg: "bg-gray-500/20" },
-   { id: 4, title: "EstoqueAPI", value: "Ativa", cor: "text-green-500", bg: "bg-green-500/20" },
-   { id: 5, title: "FinanceiroAPI", value: "Inativa", cor: "text-gray-500", bg: "bg-gray-500/20" },
-   { id: 6, title: "RelatóriosAPI", value: "Error", cor: "text-red-500", bg: "bg-red-500/20" },
-   { id: 7, title: "LogísticaAPI", value: "Ativa", cor: "text-green-500", bg: "bg-green-500/20" },
-   { id: 8, title: "MarketingAPI", value: "Inativa", cor: "text-gray-500", bg: "bg-gray-500/20" },
-   { id: 9, title: "RHAPI", value: "Ativa", cor: "text-green-500", bg: "bg-green-500/20" },
+   { id: 1, title: "UsuáriosAPI",   value: "Ativa"   },
+   { id: 2, title: "ProdutosAPI",   value: "Ativa"   },
+   { id: 3, title: "VendasAPI",     value: "Inativa" },
+   { id: 4, title: "EstoqueAPI",    value: "Ativa"   },
+   { id: 5, title: "FinanceiroAPI", value: "Inativa" },
+   { id: 6, title: "RelatóriosAPI", value: "Error"   },
+   { id: 7, title: "LogísticaAPI",  value: "Ativa"   },
+   { id: 8, title: "MarketingAPI",  value: "Inativa" },
+   { id: 9, title: "RHAPI",         value: "Ativa"   },
 ]
 
 export function MinhasAPIs() {
@@ -25,7 +25,7 @@ export function MinhasAPIs() {
                         <div className="flex justify-between items-center px-6">
                            <h1 className="text-base font-medium text-gray-400">{item.title}</h1>
                            <div className="px-6">
-                              <Badge variant="secondary" className={`px-5 py-1 ${item.bg} ${item.cor}`}>
+                              <Badge variant={item.value === "Ativa" ? "default" : item.value === "Inativa" ? "yellow" : "red"} className="px-5 py-1">
                                  {item.value}
                               </Badge>
                            </div>
