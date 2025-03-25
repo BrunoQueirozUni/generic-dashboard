@@ -68,7 +68,7 @@ export function Header() {
                                        </div>
                                     </div>
                                  ) : (
-                                    <div className="px-1 outline-none">
+                                    <div key={item.label} className="px-1 outline-none">
                                        <Link
                                           href={item.href}
                                           className="w-full flex items-center gap-2 px-2 py-2 rounded-sm hover:bg-gray-700 transition outline-none text-sm"
