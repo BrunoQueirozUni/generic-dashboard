@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { AlertCircle } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -130,28 +131,36 @@ export function FiltrosAvancados() {
                 <h3 className="text-lg font-semibold mb-2">Resultado Filtrados:</h3>
                 {
                   filteredQueries.length > 0 ? (
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead>Métodos</TableHead>
-                          <TableHead>URL</TableHead>
-                          <TableHead>Status</TableHead>
-                          <TableHead>Timestamp</TableHead>
-                          <TableHead>Tipo de resposta</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {filteredQueries.map((query) => (
-                          <TableRow key={query.id}>
-                            <TableCell>{query.method}</TableCell>
-                            <TableCell>{query.url}</TableCell>
-                            <TableCell>{query.status}</TableCell>
-                            <TableCell>{query.timestamp}</TableCell>
-                            <TableCell>{query.responseType}</TableCell>
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 20 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex flex-col gap-6"
+                    >
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead>Métodos</TableHead>
+                            <TableHead>URL</TableHead>
+                            <TableHead>Status</TableHead>
+                            <TableHead>Timestamp</TableHead>
+                            <TableHead>Tipo de resposta</TableHead>
                           </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
+                        </TableHeader>
+                        <TableBody>
+                          {filteredQueries.map((query) => (
+                            <TableRow key={query.id}>
+                              <TableCell>{query.method}</TableCell>
+                              <TableCell>{query.url}</TableCell>
+                              <TableCell>{query.status}</TableCell>
+                              <TableCell>{query.timestamp}</TableCell>
+                              <TableCell>{query.responseType}</TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </motion.div>
                   ) : (
                     <p className="flex gap-2 border p-3 rounded-md text-gray-400">
                       <AlertCircle size={24} />

@@ -53,7 +53,7 @@ export function EquipeEAcesso() {
 
    return (
       <>
-         <Card className="px-6">
+         <Card>
             <CardTitle className="px-0 pt-6 pb-1">Equipe e Acessos</CardTitle>
             <CardDescription>Gerencie os membros da sua equipe e suas permissões</CardDescription>
             <CardContent>

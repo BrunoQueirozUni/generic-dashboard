@@ -22,7 +22,7 @@ export function ConfiguracaoDeNotificacoes() {
 
    return (
       <>
-         <Card className="px-6">
+         <Card>
             <CardTitle className="px-0 pt-6 pb-1">Configurações de Notificações</CardTitle>
             <CardDescription>Escolha quais notificações você deseja receber</CardDescription>
             <CardContent>

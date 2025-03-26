@@ -2,6 +2,7 @@
 
 import * as Tabs from "@radix-ui/react-tabs";
 
+import { motion } from "framer-motion";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts"
 
@@ -46,36 +47,64 @@ export function GraficoDeConsumo() {
                         <Tabs.Trigger className="hover:bg-gray-800 data-[state=active]:bg-gray-800 cursor-pointer px-3 py-2 rounded-md" value="monthly">Mensal</Tabs.Trigger>
                      </div>
                   </Tabs.List>
+
                   <Tabs.Content value="daily">
-                     <ResponsiveContainer width="100%" height={300}>
-                        <LineChart data={dailyData}>
-                           <XAxis dataKey="date" />
-                           <YAxis />
-                           <Tooltip />
-                           <Line type="monotone" dataKey="calls" stroke="#8884d8" />
-                        </LineChart>
-                     </ResponsiveContainer>
+                     <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex flex-col gap-6"
+                     >
+                        <ResponsiveContainer width="100%" height={300}>
+                           <LineChart data={dailyData}>
+                              <XAxis dataKey="date" />
+                              <YAxis />
+                              <Tooltip />
+                              <Line type="monotone" dataKey="calls" stroke="#8884d8" />
+                           </LineChart>
+                        </ResponsiveContainer>
+                     </motion.div>
                   </Tabs.Content>
+
                   <Tabs.Content value="weekly">
-                     <ResponsiveContainer width="100%" height={300}>
-                        <LineChart data={weeklyData}>
-                           <XAxis dataKey="week" />
-                           <YAxis />
-                           <Tooltip />
-                           <Line type="monotone" dataKey="calls" stroke="#82ca9d" />
-                        </LineChart>
-                     </ResponsiveContainer>
+                     <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex flex-col gap-6"
+                     >
+                        <ResponsiveContainer width="100%" height={300}>
+                           <LineChart data={weeklyData}>
+                              <XAxis dataKey="week" />
+                              <YAxis />
+                              <Tooltip />
+                              <Line type="monotone" dataKey="calls" stroke="#82ca9d" />
+                           </LineChart>
+                        </ResponsiveContainer>
+                     </motion.div>
                   </Tabs.Content>
+
                   <Tabs.Content value="monthly">
-                     <ResponsiveContainer width="100%" height={300}>
-                        <LineChart data={monthlyData}>
-                           <XAxis dataKey="month" />
-                           <YAxis />
-                           <Tooltip />
-                           <Line type="monotone" dataKey="calls" stroke="#ffc658" />
-                        </LineChart>
-                     </ResponsiveContainer>
+                     <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex flex-col gap-6"
+                     >
+                        <ResponsiveContainer width="100%" height={300}>
+                           <LineChart data={monthlyData}>
+                              <XAxis dataKey="month" />
+                              <YAxis />
+                              <Tooltip />
+                              <Line type="monotone" dataKey="calls" stroke="#ffc658" />
+                           </LineChart>
+                        </ResponsiveContainer>
+                     </motion.div>
                   </Tabs.Content>
+
                </Tabs.Root>
             </CardContent>
          </Card>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -50,10 +51,18 @@ export function TesteDeEndpoints() {
                   <Button variant="white" type="submit" className="mt-4">Enviar Requisição</Button>
                </form>
                {response && (
-                  <div className="mt-4">
-                     <h4 className="mb-2 font-semibold">Resposta:</h4>
-                     <pre className="bg-gray-800/80 p-4 rounded-md overflow-auto">{response}</pre>
-                  </div>
+                  <motion.div
+                     initial={{ opacity: 0, x: -20 }}
+                     animate={{ opacity: 1, x: 0 }}
+                     exit={{ opacity: 0, x: 20 }}
+                     transition={{ duration: 0.3 }}
+                     className="flex flex-col gap-6"
+                  >
+                     <div className="mt-4">
+                        <h4 className="mb-2 font-semibold">Resposta:</h4>
+                        <pre className="bg-gray-800/80 p-4 rounded-md overflow-auto">{response}</pre>
+                     </div>
+                  </motion.div>
                )}
             </CardContent>
          </Card>

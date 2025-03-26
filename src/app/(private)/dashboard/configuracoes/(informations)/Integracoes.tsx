@@ -77,7 +77,7 @@ export function Integracoes() {
 
    return (
       <>
-         <Card className="px-6">
+         <Card>
             <CardTitle className="px-0 pt-6 pb-1">Integrações</CardTitle>
             <CardDescription>Conecte sua API a serviços externos</CardDescription>
             <CardContent>

@@ -17,13 +17,13 @@ export default function Dashboard() {
         </PageDescription>
       </PageHeader>
 
-      <PageContent>
+      <PageContent className="flex-row">
         <StatusDaConta />
         <SaldoDisponivel />
         <FaturasPendentes />
       </PageContent>
 
-      <PageContent>
+      <PageContent className="flex-row">
         <div className="flex-1">
           <ResumoDeUsoDaAPI />
         </div>
