@@ -14,10 +14,10 @@ const menuItems = [
       title: "PRINCIPAL",
       items: [
          { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-         { icon: KeySquare, label: "Gerenciar APIs", href: "/gerenciar-api" },
-         { icon: CreditCard, label: "Faturamento", href: "/faturamento" },
-         { icon: ChartNoAxesColumnIncreasing, label: "Monitoramento", href: "/monitoramento" },
-         { icon: Search, label: "Consulta de Dados", href: "/consulta-de-dados" },
+         { icon: KeySquare, label: "Gerenciar APIs", href: "/dashboard/gerenciar-api" },
+         { icon: CreditCard, label: "Faturamento", href: "/dashboard/faturamento" },
+         { icon: ChartNoAxesColumnIncreasing, label: "Monitoramento", href: "/dashboard/monitoramento" },
+         { icon: Search, label: "Consulta de Dados", href: "/dashboard/consulta-de-dados" },
       ]
    },
    {
@@ -29,10 +29,6 @@ const menuItems = [
       ]
    }
 ]
-
-const user = {
-   icon: Settings, label: "", href: "/configuracoes"
-}
 
 export function Sidebar() {
 

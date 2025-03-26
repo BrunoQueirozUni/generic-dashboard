@@ -1,7 +1,7 @@
 import { DeleteKey } from "./components/DeleteKey";
 import { RenovarKey } from "./components/RenovarKey";
 import { Permissions } from "./components/Permissions";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 
 export const items = [
    { id: 1, key: "alterra_rnqt0ynnf", date: "23/12/2024", },

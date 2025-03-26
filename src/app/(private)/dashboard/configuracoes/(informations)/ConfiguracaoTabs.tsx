@@ -6,7 +6,6 @@ import { InformacoesPessoais } from "./(PerfilUsuario)/InformacoesPessoais";
 import { AutenticacaoDeDoisFatores } from "./(PerfilUsuario)/AutenticacaoDeDoisFatores";
 import { EquipeEAcesso } from "./EquipeEAcesso";
 import { Integracoes } from "./Integracoes";
-import Alert from "@/components/Alert";
 
 export function ConfiguracaoTabs() {
 

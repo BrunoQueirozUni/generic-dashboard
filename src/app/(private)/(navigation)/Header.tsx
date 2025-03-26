@@ -8,8 +8,8 @@ import { User, SignOut, GearFine, Bell } from "@phosphor-icons/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 const user = [
-   { icon: User, label: "Perfil", href: "/configuracoes" },
-   { icon: GearFine, label: "Configurações", href: "/configuracoes" },
+   { icon: User, label: "Perfil", href: "/dashboard/configuracoes" },
+   { icon: GearFine, label: "Configurações", href: "/dashboard/configuracoes" },
    { icon: SignOut, label: "Sair", href: "" },
 ]
 
@@ -52,10 +52,10 @@ export function Header() {
                      <DropdownMenu.Separator className="h-px bg-gray-700 my-1" />
                      {
                         user.map((item) => (
-                           <DropdownMenu.Item asChild>
+                           <DropdownMenu.Item asChild key={item.label} >
                               {
                                  item.label === "Sair" ? (
-                                    <div key={item.label} className="flex flex-col w-full outline-none">
+                                    <div className="flex flex-col w-full outline-none">
                                        <DropdownMenu.Separator className="h-px bg-gray-700 my-1" />
                                        <div className="px-1">
                                           <Link
@@ -68,7 +68,7 @@ export function Header() {
                                        </div>
                                     </div>
                                  ) : (
-                                    <div key={item.label} className="px-1 outline-none">
+                                    <div className="px-1 outline-none">
                                        <Link
                                           href={item.href}
                                           className="w-full flex items-center gap-2 px-2 py-2 rounded-sm hover:bg-gray-700 transition outline-none text-sm"
