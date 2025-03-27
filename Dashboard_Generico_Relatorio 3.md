@@ -17,6 +17,6 @@ O foco principal foi a **padronização e otimização** do site.
 
 Qualquer coisa o site ainda esta no ar para visualização de design e funcionalidades
 
-link: https://generic-dashboard-pr0i0e9t4-brunoqueirozunis-projects.vercel.app
+link: https://generic-dashboard-b6j2mz0j6-brunoqueirozunis-projects.vercel.app/dashboard
 
 > **Nota**: Cada página ainda não possui todas as funcionalidades completas e contém informações ilustrativas.
