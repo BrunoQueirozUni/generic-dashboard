@@ -15,6 +15,7 @@ const badgeVariants = cva(
         blue: "border-transparent bg-blue-500/20 text-blue-500",
         purple: "border-transparent bg-purple-500/20 text-purple-500",
         
+        article: "border-transparent bg-gray-500/20 text-gray-400 border-0 py-1 px-4",
         adm: "bg-yellow-500/20 text-yellow-500 border-0 py-2",
         dev: "bg-blue-500/20 text-blue-500 border-0 py-2",
         visitor: "bg-gray-500/20 text-gray-500 border-0 py-2",

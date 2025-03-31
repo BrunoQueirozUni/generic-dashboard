@@ -21,6 +21,8 @@ const buttonVariants = cva(
           "text-black bg-white hover:bg-gray-300 cursor-pointer",
         transparent:
           "bg-transparent",
+        link:
+          "bg-transparent underline-offset-4 hover:underline text-primary cursor-pointer",
       },
       size: {
         default: "h-10 px-4 py-2",

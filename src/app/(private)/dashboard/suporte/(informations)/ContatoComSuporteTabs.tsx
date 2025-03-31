@@ -41,7 +41,7 @@ export function ContatoComSuporteTabs() {
 
    return (
       <Tabs.Root defaultValue="ticket" className="w-full">
-         <Tabs.List className="inline-flex w-full pb-8">
+         <Tabs.List className="pb-8">
             <div className="w-full bg-gray-700/50 rounded-sm py-1 px-1 flex gap-2 text-white">
                <Tabs.Trigger className={TabsDesign.tabsDesign} value="ticket">
                   <EnvelopeSimple size={23} />
@@ -144,7 +144,7 @@ export function ContatoComSuporteTabs() {
             )}
          </Tabs.Content>
 
-         <Tabs.Content value="chat" className="pt-4 border border-gray-700">
+         <Tabs.Content value="chat" className="pt-4 border border-gray-700 rounded-md">
             <motion.div
                initial={{ opacity: 0, x: -20 }}
                animate={{ opacity: 1, x: 0 }}
@@ -161,7 +161,7 @@ export function ContatoComSuporteTabs() {
             </motion.div>
          </Tabs.Content>
 
-         <Tabs.Content value="email" className="pt-4 border border-gray-700">
+         <Tabs.Content value="email" className="pt-4 border border-gray-700 rounded-md">
             <motion.div
                initial={{ opacity: 0, x: -20 }}
                animate={{ opacity: 1, x: 0 }}

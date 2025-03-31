@@ -24,7 +24,7 @@ const menuItems = [
       title: "SUPORTE",
       items: [
          { icon: BadgeHelp, label: "Suporte", href: "/dashboard/suporte" },
-         { icon: FileText, label: "Documentação", href: "/documentacao" },
+         { icon: FileText, label: "Documentação", href: "/dashboard/documentacao" },
          { icon: "", label: "Relatórios", href: "/relatorios" },
       ]
    }
@@ -35,7 +35,7 @@ export function Sidebar() {
    const pathname = usePathname();
 
    return (
-      <aside className="w-56 bg-gray-900/50 backdrop-blur-xl border-r border-gray-800 py-6 px-4 hidden lg:flex lg:flex-col">
+      <aside className="w-56 bg-gray-900/50 backdrop-blur-xl border-r border-gray-800 py-6 px-4 hidden lg:flex lg:flex-col flex-shrink-0">
          <div className="flex justify-center items-center mb-8">
             <Image src={Logo} width={90} height={90} alt="Logo" />
          </div>
