@@ -1,5 +1,6 @@
-import { PageContent, PageDescription, PageHeader, PageTitle } from "@/components/ui/pageConfig";
+import { DocumentacaoAPI } from "./(informations)/DocumentacaoAPI";
 import { BaseDeConhecimento } from "./(informations)/BaseDeConhecimento";
+import { PageContent, PageDescription, PageHeader, PageTitle } from "@/components/ui/pageConfig";
 
 export default function Documentacao() {
    return (
@@ -10,6 +11,7 @@ export default function Documentacao() {
          </PageHeader>
          <PageContent>
             <BaseDeConhecimento />
+            <DocumentacaoAPI />
          </PageContent>
       </>
    )

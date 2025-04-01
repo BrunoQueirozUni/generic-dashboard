@@ -2,10 +2,12 @@
 
 import * as Tabs from "@radix-ui/react-tabs"
 
+import Link from "next/link";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Animation } from "@/components/ui/animation";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { Book, Code, FileText, Globe, MagnifyingGlass, WarningCircle } from "@phosphor-icons/react";
 
@@ -95,8 +97,10 @@ export function BaseDeConhecimento() {
                   </Button>
                </div>
                <Tabs.Root defaultValue="all" onValueChange={(value) => setActiveCategory(value as any)}>
-                  <Tabs.List className="pt-6">
-                     <div className="w-full bg-gray-700/50 rounded-sm py-1 px-1 flex gap-2">
+
+
+                  <Tabs.List className="pt-6"> {/* Container */}
+                     <div className="w-full bg-gray-700/50 rounded-sm py-1 px-1 flex gap-2"> {/* Tabs */}
                         <Tabs.Trigger className={TabsDesign.tabsDesign} value="all">
                            <Globe size={20} />
                            Todos
@@ -115,6 +119,8 @@ export function BaseDeConhecimento() {
                         </Tabs.Trigger>
                      </div>
                   </Tabs.List>
+
+
                   <div className="">
                      <Tabs.Content value="all">
                         <ArticleList articles={filteredArticles} />
@@ -138,7 +144,7 @@ export function BaseDeConhecimento() {
 
 function ArticleList({ articles }: { articles: Article[] }) {
    return (
-      <div>
+      <Animation className="gap-0">
          {
             articles.length > 0 ? (
                articles.map((articles) => (
@@ -152,8 +158,8 @@ function ArticleList({ articles }: { articles: Article[] }) {
                      <div>
                         <span className="text-sm text-gray-400">{articles.content}</span>
                      </div>
-                     <Button variant="link" className="p-0">
-                        Ler mais
+                     <Button variant="link-blue" className="p-0">
+                        <Link href={`/dashboard/documentacao/artigos/${articles.id}`}>Ler mais</Link>
                      </Button>
                   </div>
                ))
@@ -164,6 +170,6 @@ function ArticleList({ articles }: { articles: Article[] }) {
                </div>
             )
          }
-      </div>
+      </Animation>
    )
 }

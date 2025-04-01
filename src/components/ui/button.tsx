@@ -9,20 +9,22 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 
+        default:
           "bg-primary hover:bg-primary/80",
         red:
           "cursor-pointer bg-red-500 hover:bg-red-700",
-        green: 
+        green:
           "cursor-pointer bg-green-500 hover:bg-green-600 text-white",
         gray:
-          "cursor-pointer bg-transparent border border-gray-700 hover:bg-gray-600",
-        white: 
+          "cursor-pointer bg-transparent border border-gray-700 hover:bg-gray-600 text-white",
+        white:
           "text-black bg-white hover:bg-gray-300 cursor-pointer",
         transparent:
           "bg-transparent",
         link:
           "bg-transparent underline-offset-4 hover:underline text-primary cursor-pointer",
+        "link-blue":
+          "bg-transparent underline-offset-4 hover:underline text-blue-500 cursor-pointer",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -40,7 +42,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
 

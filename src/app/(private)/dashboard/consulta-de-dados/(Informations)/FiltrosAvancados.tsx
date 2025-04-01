@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 // Componente alert
 import { useAlert } from "@/components/Alert";
+import { Animation } from "@/components/ui/animation";
 
 // Dados simulados
 const allQueries = [
@@ -131,13 +132,7 @@ export function FiltrosAvancados() {
                 <h3 className="text-lg font-semibold mb-2">Resultado Filtrados:</h3>
                 {
                   filteredQueries.length > 0 ? (
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 20 }}
-                      transition={{ duration: 0.3 }}
-                      className="flex flex-col gap-6"
-                    >
+                    <Animation>
                       <Table>
                         <TableHeader>
                           <TableRow>
@@ -160,7 +155,7 @@ export function FiltrosAvancados() {
                           ))}
                         </TableBody>
                       </Table>
-                    </motion.div>
+                    </Animation>
                   ) : (
                     <p className="flex gap-2 border p-3 rounded-md text-gray-400">
                       <AlertCircle size={24} />

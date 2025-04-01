@@ -3,11 +3,11 @@
 import * as Tabs from "@radix-ui/react-tabs";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Animation } from "@/components/ui/animation";
 import { Chat, EnvelopeSimple, Envelope, CheckCircle } from "@phosphor-icons/react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
@@ -67,14 +67,8 @@ export function ContatoComSuporteTabs() {
                   </p>
                </div>
             ) : (
-               <form onSubmit={handleTicketSubmit} className="outiline-none"  >
-                  <motion.div
-                     initial={{ opacity: 0, x: -20 }}
-                     animate={{ opacity: 1, x: 0 }}
-                     exit={{ opacity: 0, x: 20 }}
-                     transition={{ duration: 0.3 }}
-                     className="flex flex-col gap-6"
-                  >
+               <form onSubmit={handleTicketSubmit} className="outiline-none">
+                  <Animation>
                      <div className="flex-1 grid grid-cols-2 gap-3">
                         <Label htmlFor="name">Nome</Label>
                         <Label htmlFor="email">Email</Label>
@@ -139,36 +133,24 @@ export function ContatoComSuporteTabs() {
                      <div>
                         <Button type="submit" variant="white">Enviar Ticket</Button>
                      </div>
-                  </motion.div>
+                  </Animation>
                </form>
             )}
          </Tabs.Content>
 
          <Tabs.Content value="chat" className="pt-4 border border-gray-700 rounded-md">
-            <motion.div
-               initial={{ opacity: 0, x: -20 }}
-               animate={{ opacity: 1, x: 0 }}
-               exit={{ opacity: 0, x: 20 }}
-               transition={{ duration: 0.3 }}
-               className="flex flex-col items-center justify-center space-y-4 py-6"
-            >
+            <Animation className="flex flex-col items-center justify-center space-y-4 py-6 gap-0">
                <Chat size={75} className="text-gray-500" />
                <div className="text-center">
                   <h3 className="text-lg font-medium">Chat com Suporte</h3>
                   <p className="text-sm text-gray-400">Nossos agentes estão disponíveis para chat em tempo real de segunda a sexta, das 9h às 18h.</p>
                </div>
                <Button variant="white">Iniciar Chat</Button>
-            </motion.div>
+            </Animation>
          </Tabs.Content>
 
          <Tabs.Content value="email" className="pt-4 border border-gray-700 rounded-md">
-            <motion.div
-               initial={{ opacity: 0, x: -20 }}
-               animate={{ opacity: 1, x: 0 }}
-               exit={{ opacity: 0, x: 20 }}
-               transition={{ duration: 0.3 }}
-               className="flex flex-col items-center justify-center space-y-4 py-6"
-            >
+            <Animation className="flex flex-col items-center justify-center space-y-4 py-6 gap-0">
                <Envelope size={75} className="text-gray-500" />
                <div className="text-center">
                   <h3 className="text-lg font-medium">Suporte por E-mail</h3>
@@ -176,7 +158,7 @@ export function ContatoComSuporteTabs() {
                   <p className="mt-2 text-lg">suporte@dashborad.com</p>
                   <p className="text-sm text-gray-400">Disponível 24/7, com tempo de resposta de até 24 horas úteis.</p>
                </div>
-            </motion.div>
+            </Animation>
          </Tabs.Content>
 
       </Tabs.Root>
