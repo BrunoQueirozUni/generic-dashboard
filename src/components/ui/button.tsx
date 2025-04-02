@@ -21,6 +21,8 @@ const buttonVariants = cva(
           "text-black bg-white hover:bg-gray-300 cursor-pointer",
         transparent:
           "bg-transparent",
+        popover:
+          "bg-transparent text-white hover:bg-gray-700/50 cursor-pointer",
         link:
           "bg-transparent underline-offset-4 hover:underline text-primary cursor-pointer",
         "link-blue":

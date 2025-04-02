@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, KeySquare, CreditCard, ChartNoAxesColumnIncreasing, Search, BadgeHelp, FileText, BookText } from "lucide-react";
+import { LayoutDashboard, KeySquare, CreditCard, ChartNoAxesColumnIncreasing, Search, BadgeHelp, FileText, ChartSpline } from "lucide-react";
 
 // Imagens
 import Logo from "../../../../public/imgs/alterra.gif"
@@ -25,7 +25,7 @@ const menuItems = [
       items: [
          { icon: BadgeHelp, label: "Suporte", href: "/dashboard/suporte" },
          { icon: FileText, label: "Documentação", href: "/dashboard/documentacao" },
-         { icon: "", label: "Relatórios", href: "/relatorios" },
+         { icon: ChartSpline, label: "Relatórios", href: "/dashboard//relatorios" },
       ]
    }
 ]
