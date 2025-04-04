@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="min-h-screen w-full flex flex-col flex-grow h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+      <body className="min-h-screen bg-gradient-to-br from-black to-slate-900 text-slate-100 flex">
         {children}
       </body>
     </html>

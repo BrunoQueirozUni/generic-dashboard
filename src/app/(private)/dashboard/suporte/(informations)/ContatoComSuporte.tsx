@@ -1,20 +1,27 @@
-"use client"
+"use client";
 
 import { ContatoComSuporteTabs } from "./ContatoComSuporteTabs";
-import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@/components/ui/card";
 
 export function ContatoComSuporte() {
-   return (
-      <>
-         <Card className="flex-1">
-            <CardTitle className="px-0 pt-6 pb-1">Contato Com Suporte</CardTitle>
-            <CardDescription>Entre em contato com nossa equipe de suporte</CardDescription>
-            <CardContent className="pt-6">
-               <ContatoComSuporteTabs />
-            </CardContent>
-         </Card>
-      </>
-   )
+  return (
+    <>
+      <Card className="flex-1">
+        <CardTitle className="px-0 pt-6 pb-1">Contato Com Suporte</CardTitle>
+        <CardDescription>
+          Entre em contato com nossa equipe de suporte
+        </CardDescription>
+        <CardContent className="pt-6">
+          <ContatoComSuporteTabs />
+        </CardContent>
+      </Card>
+    </>
+  );
 }
 
 /*

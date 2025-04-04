@@ -85,7 +85,7 @@ export function Header() {
                      <DropdownMenu.Arrow className="fill-gray-900" />
                   </DropdownMenu.Content>
                </DropdownMenu.Portal>
-            </DropdownMenu.Root >
+            </DropdownMenu.Root>
          </header >
       </>
    )

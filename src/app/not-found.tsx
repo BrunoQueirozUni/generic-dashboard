@@ -28,7 +28,7 @@ export default function NotFound() {
                      Ops! A página que você está procurando não existe ou foi movida.
                   </p>
                   <div className="flex justify-center">
-                     <Link href="/">
+                     <Link href="javascript:history.back()">
                         <Button className="bg-primary text-black hover:bg-primary/90 cursor-pointer">Voltar para a página inicial</Button>
                      </Link>
                   </div>
